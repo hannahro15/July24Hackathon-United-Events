@@ -22,33 +22,40 @@ body::before {
 header {
     background: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: space-around; /* Spread out navigation buttons evenly */
     text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    padding: 10px 20px; /* Increase padding for better spacing */
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px); /* Adjusting height to exclude header and footer */
+    height: calc(100vh - 120px); /* Adjusting height to exclude header and footer */
     padding: 20px;
     text-align: center;
+    margin-top: 60px; /* Offset for fixed header */
 }
 
 #introduction {
