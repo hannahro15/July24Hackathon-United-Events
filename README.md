@@ -1,6 +1,6 @@
 # United Events
 
-An events based project for the LGBTIA+ society which has a calendar where you can select events in. 
+An events based project for the LGBTIA+ society which has a calendar where you can select events and register events for them. 
 
 # UX
 
@@ -33,5 +33,55 @@ By breaking down these user stories into more granular steps, you can ensure tha
 - As a user, the home page should provide a link to the page with the calendar with the events in.
 - As an admin, they should be able to create, update, add, and remove events from the calendar.
 
+## Wireframes
+
+<details>
+<summary>Create an account page - Mobile</summary>   
+<img src='wireframes/create-account-page-mobile.png' alt='Create an Account Page - Mobile'>
+</details>
+<details>
+<summary>Create an account page - Tablet</summary>   
+<img src='wireframes/create-account-page-tablet.png' alt='Create an Account Page - Tablet'>
+</details>
+<details>
+<summary>Create an account page - Desktop</summary>   
+<img src='wireframes/create-account-page-desktop.png' alt='Create an Account Page - Desktop'>
+</details>
+<details>
+<summary>Login page - Mobile</summary>   
+<img src='wireframes/login-page-mob.png' alt='Login Page - Mobile'>
+</details>
+<details>
+<summary>Login page - Tablet</summary>   
+<img src='wireframes/login-page-tablet.png' alt='Login Page - Tablet'>
+</details>
+<details>
+<summary>Login page - Desktop</summary>   
+<img src='wireframes/login-page-desktop.png' alt='Login Page - Desktop'>
+</details>
+<details>
+<summary>Home Page - Mobile</summary>   
+<img src='wireframes/home-page-mob.png' alt='Home Page - Mobile'>
+</details>
+<details>
+<summary>Home Page - Tablet</summary>   
+<img src='wireframes/home-page-tablet.png' alt='Home Page - Tablet'>
+</details>
+<details>
+<summary>Home Page - Desktop</summary>   
+<img src='wireframes/home-page-desktop.png' alt='Home Page - Desktop'>
+</details>
+<details>
+<summary>Events Calendar Page - Mobile</summary>   
+<img src='wireframes/events-calendar-page-mob.png' alt='Events Calendar Page - Mobile'>
+</details>
+<details>
+<summary>Events Calendar Page - Tablet</summary>   
+<img src='wireframes/events-calendar-page-tablet.png' alt='Events Calendar Page - Tablet'>
+</details>
+<details>
+<summary>Events Calendar Page - Desktop</summary>   
+<img src='wireframes/events-calendar-page-desktop.png' alt='Events Calendar Page - Desktop'>
+</details>
 
 
