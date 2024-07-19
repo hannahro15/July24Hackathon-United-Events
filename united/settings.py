@@ -19,9 +19,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUG", True)
 
 ALLOWED_HOSTS = [
-    '8000-primarypigm-july24hacka-lu8gq5bqsbw.ws-eu115.gitpod.io',
+    '8000-primarypigm-july24hacka-g0pep5a7smx.ws-eu115.gitpod.io',
 ]
-CSRF_TRUSTED_ORIGINS = ['https://8000-primarypigm-july24hacka-lu8gq5bqsbw.ws-eu115.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-primarypigm-july24hacka-g0pep5a7smx.ws-eu115.gitpod.io']
 
 # Application definition
 
