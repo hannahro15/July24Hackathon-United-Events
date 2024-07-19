@@ -75,9 +75,9 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 
 | | Register | Login | Home | Events Calendar |
 | --- | --- | --- | --- | --- |
-| mobile | ![screenshot](wireframes/create-account-page-mobile.png) | ![screenshot](wireframes/login-page-mob.png) | ![screenshot](wireframes/home-page-mob.png) | ![screenshot](wireframes/events-calendar-page-mob.png) |
-| tablet | ![screenshot](wireframes/create-account-page-tablet.png)  | ![screenshot](wireframes/login-page-tablet.png) | ![screenshot](wireframes/home-page-tablet.png) | ![screenshot](wireframes/events-calendar-page-tablet.png) |
-| desktop | ![screenshot](wireframes/create-account-page-desktop.png) | ![screenshot](wireframes/login-page-desktop.png) | ![screenshot](wireframes/home-page-desktop.png) | ![screenshot](wireframes/events-calendar-page-desktop.png) |
+| mobile | ![screenshot](documentation/wireframes/create-account-page-mobile.png) | ![screenshot](documentation/wireframes/login-page-mob.png) | ![screenshot](documentation/wireframes/home-page-mob.png) | ![screenshot](documentation/wireframes/events-calendar-page-mob.png) |
+| tablet | ![screenshot](documentation/wireframes/create-account-page-tablet.png)  | ![screenshot](documentation/wireframes/login-page-tablet.png) | ![screenshot](documentation/wireframes/home-page-tablet.png) | ![screenshot](documentation/wireframes/events-calendar-page-tablet.png) |
+| desktop | ![screenshot](documentation/wireframes/create-account-page-desktop.png) | ![screenshot](documentation/wireframes/login-page-desktop.png) | ![screenshot](documentation/wireframes/home-page-desktop.png) | ![screenshot](documentation/wireframes/events-calendar-page-desktop.png) |
 
 
 ## Features

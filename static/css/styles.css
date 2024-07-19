@@ -1,20 +1,30 @@
-body, html {
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body>footer {
+    position: sticky;
+    top: 100vh;
 }
 
 /* ----- nav ----- */
 
-.nav-container{
+.nav-container {
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
-.navbar{
-    background: linear-gradient(90deg,#F11A7B, #982176);
+.navbar {
+    background: linear-gradient(90deg, #F11A7B, #982176);
 }
 
 .navbar li {
@@ -25,13 +35,11 @@ body, html {
     color: #FAFAFA;
 }
 
-/* ----- nav ----- */
-#callout{
-    background: linear-gradient(90deg,#F11A7B, #982176);
+/* ----- callout ----- */
+#callout {
+    background: linear-gradient(90deg, #F11A7B, #982176);
     color: #FAFAFA;
-    padding-top: 7%;
-    padding-bottom: 5%;
-    height: 70vh;
+    height: 60vh;
     position: relative;
 }
 
@@ -57,8 +65,8 @@ body, html {
 }
 
 /* ----- footer ----- */
-footer{
-    background: linear-gradient(90deg,#F11A7B, #982176);
+footer {
+    background: linear-gradient(90deg, #F11A7B, #982176);
     color: #FAFAFA;
     position: fixed;
     bottom: 0;
@@ -73,7 +81,7 @@ footer{
 
 .footer-li li {
     display: inline;
-    
+
 }
 
 .footer-li li a {
@@ -82,17 +90,17 @@ footer{
 }
 
 /* ----- contact page ----- */
-.form-title h2{
+.form-title h2 {
     color: #982176;
 }
 
-.form-title hr{
+.form-title hr {
     background-color: #982176;
     height: 0.2rem;
     width: 25rem;
 }
 
-.contact-input{
+.contact-input {
     width: 100%;
     height: 3.5rem;
     border: none;
@@ -104,12 +112,148 @@ footer{
     height: 10rem;
 }
 
-.contact-input:focus{
+.contact-input:focus {
     border: 0.2rem solid #ffc953;
 }
 
-.contact-input::placeholder{
+.contact-input::placeholder {
     padding: 1rem;
     color: #3e001fa8;
 }
 
+/* menu modal images */
+.modal img {
+    max-height: 400px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Forms css sign-in sign-out forgot password register */
+
+.form-signup-heading {
+    margin-bottom: 1rem;
+}
+
+.form-signup {
+    max-width: 600px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.form-account-login {
+    max-width: 600px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+
+.form-account {
+    max-width: 600px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.form-account input[type="email"] {
+    width: 75%;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+.form-contact {
+    max-width: 600px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.form-contact .form-control {
+    max-width: 300px;
+    margin: 10px auto;
+    display: block;
+}
+
+.form-contact .form-control textarea {
+    height: 150px;
+}
+
+.form-contact .btn {
+    width: 50%;
+    margin-top: 1rem;
+}
+
+/* FLASH MESSAGES + ALERTS */
+#alerts {
+    display: grid;
+    position: fixed;
+    top: 76px;
+    width: 100%;
+    z-index: 1001;
+}
+
+#alerts .alert {
+    height: 76px;
+}
+
+.alert {
+    width: 100%;
+    z-index: 1002;
+    margin-bottom: 2px;
+    border-radius: 0;
+    box-shadow: 0 2px 9px 0 rgba(var(--black), 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.alert h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.alert-slide {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    transform: translate3d(0, -20em, 0);
+    overflow: hidden;
+}
+
+
+@media (min-width: 1025px) {
+
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+        font-size: 1rem;
+        line-height: 2.15;
+        padding-left: .75em;
+        padding-right: .75em;
+    }
+
+    .card-registration .select-arrow {
+        top: 13px;
+    }
+
+    .bg-grey {
+        background-color: #eae8e8;
+    }
+}
+
+.navbar-toggler {
+    color: white;
+}
+
+.navbar-toggler .fa-solid {
+    color: white;
+}
