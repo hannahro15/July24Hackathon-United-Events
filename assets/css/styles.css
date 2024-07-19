@@ -1,0 +1,84 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* ----- nav ----- */
+
+.nav-container{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar{
+    background: linear-gradient(90deg,#F11A7B, #982176);
+}
+
+.navbar li {
+    padding-right: 1rem;
+}
+
+.navbar li a {
+    color: #FAFAFA;
+}
+
+/* ----- nav ----- */
+#callout{
+    background: linear-gradient(90deg,#F11A7B, #982176);
+    color: #FAFAFA;
+    padding-top: 7%;
+    padding-bottom: 5%;
+    height: 70vh;
+    position: relative;
+}
+
+.custom-shape-divider-bottom-1721367110 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+}
+
+.custom-shape-divider-bottom-1721367110 svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.custom-shape-divider-bottom-1721367110 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* ----- footer ----- */
+footer{
+    background: linear-gradient(90deg,#F11A7B, #982176);
+    color: #FAFAFA;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-li li {
+    display: inline;
+    
+}
+
+.footer-li li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
