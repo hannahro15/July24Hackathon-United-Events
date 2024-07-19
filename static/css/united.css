@@ -1,0 +1,125 @@
+
+html, body {
+    height: 100%;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+button, .navbar {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+}
+
+body > footer {
+    position: sticky;
+    top: 100vh;
+}
+/* menu modal images */
+.modal img {
+  max-height: 400px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/*#hero_image {
+  background-image: url('https://res.cloudinary.com/dujhyidgj/image/upload/v1715179367/static/images/hero_image.743be74313ab.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+/* Forms css signin signout fotgot password regester */
+ 
+  .form-signup-heading {
+    margin-bottom: 1rem;
+  }
+
+  .form-signup {
+    max-width: 600px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+  }
+
+  .form-account-login {
+    max-width: 600px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+  }
+ 
+  
+  .form-account {
+    max-width: 600px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+  }
+  .form-account input[type="email"] {
+    width: 75%; 
+    max-width: 500px; 
+    min-width: 300px; 
+}
+
+  .form-contact {
+    max-width: 600px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+  }
+
+  .form-contact .form-control {
+    max-width: 300px; 
+    margin: 10px auto; 
+    display: block; 
+  }
+  
+  .form-contact .form-control textarea {
+    height: 150px;
+  }
+  
+  .form-contact .btn {
+    width: 50%;
+    margin-top: 1rem;
+  }
+  
+  
+@media (min-width: 1025px) {
+ 
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    
+    .bg-grey {
+    background-color: #eae8e8;
+    }
+}
+
+.navbar-toggler {
+  color: white;
+}
+.navbar-toggler .fa-solid {
+  color: white;
+}

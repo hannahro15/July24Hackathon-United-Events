@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css">
+
+    <!-- Hero Section -->
+    <section class="hero_image" id="hero_image">
+        <div class="container text-center text-light">
+            <!-- Hero content goes here -->
+        </div>
+    </section>
+
+
+
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to</h1>
+            <p class="lead">Enjoy.</p>
+            <hr class="my-4">
+            <p>Check out!</p>
+        </div>
+        
+        <div class="row">  <!-- Ensure all cards are within this one 'row' div -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/pride.jpg' %}" class="card-img-top" alt="event">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">Event 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/pride.jpg' %}" class="card-img-top" alt="event">
+                    <div class="card-body">
+                        <h5 class="card-title">Event 2</h5>
+                        <p class="card-text">A.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/pride.jpg' %}" class="card-img-top" alt="event">
+                    <div class="card-body">
+                        <h5 class="card-title">Event 3</h5>
+                        <p class="card-text">Loaded.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
