@@ -81,4 +81,35 @@ footer{
     color: #fff;
 }
 
+/* ----- contact page ----- */
+.form-title h2{
+    color: #982176;
+}
+
+.form-title hr{
+    background-color: #982176;
+    height: 0.2rem;
+    width: 25rem;
+}
+
+.contact-input{
+    width: 100%;
+    height: 3.5rem;
+    border: none;
+    outline: none;
+    background-color: #fbefd6;
+}
+
+.form-section textarea {
+    height: 10rem;
+}
+
+.contact-input:focus{
+    border: 0.2rem solid #ffc953;
+}
+
+.contact-input::placeholder{
+    padding: 1rem;
+    color: #3e001fa8;
+}
 
