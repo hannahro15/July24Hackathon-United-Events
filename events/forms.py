@@ -8,15 +8,17 @@ class EventForm(forms.ModelForm):
     """
     class Meta:
         model = Event
-        fields = ('name', 'start_date', 'end_date', 'location',
-                  'description', 'highlights', 'accessibility',
-                  'ticket_info', 'additional_notes', 'website')
+        fields = (
+            'name', 'start_date', 'end_date', 'location',
+            'description', 'highlights', 'accessibility',
+            'ticket_info', 'additional_notes', 'website'
+        )
         labels = {
             'start_date': 'Start Date',
             'end_date': 'End Date',
             'accessibility': 'Accessibility (Optional)',
             'ticket_info': 'Ticket Information',
             'additional_notes': 'Additional Notes (Optional)',
-            'website': 'Website (Optional)'
+            'website': 'Website'
         }
 

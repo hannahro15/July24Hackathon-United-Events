@@ -92,7 +92,7 @@ def add_event(request):
                 'Error: please try to again'
             )
 
-    template = 'add_event.html'
+    template = 'events/add_event.html'
     context = {
         'event_form': event_form,
     }
