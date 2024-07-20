@@ -1,13 +1,31 @@
+:root {
+    --united-red: 255, 0, 0;
+    --united-orange: 255, 127, 0;
+    --united-yellow: 255, 255, 0;
+    --united-green: 0, 255, 0;
+    --united-blue: 0, 0, 255;
+    --united-indigo: 75, 0, 130;
+    --united-violet: 139, 0, 255;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    text-decoration: none !important;
 }
 
 body,
 html {
     height: 100%;
+}
+
+body:not(#bg-white) {
+    /* https://images.pexels.com/photos/1167034/pexels-photo-1167034.jpeg */
+    background: url("../images/pride-cape.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 body>footer {
@@ -203,7 +221,7 @@ footer {
     position: fixed;
     top: 76px;
     width: 100%;
-    z-index: 1001;
+    z-index: 9999;
 }
 
 #alerts .alert {
@@ -229,6 +247,50 @@ footer {
     transition: all 1s ease-in-out;
     transform: translate3d(0, -20em, 0);
     overflow: hidden;
+}
+
+/* OVERLAY */
+aside#overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease-in-out;
+    background: linear-gradient(180deg,
+        rgba(var(--united-red), 0.1) 0%,
+        rgba(var(--united-orange), 0.1) 16.67%,
+        rgba(var(--united-yellow), 0.1) 33.33%,
+        rgba(var(--united-green), 0.1) 50%,
+        rgba(var(--united-blue), 0.1) 66.67%,
+        rgba(var(--united-indigo), 0.1) 83.33%,
+        rgba(var(--united-violet), 0.1) 100%
+    ) !important;
+}
+
+aside#overlay.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* MODALS */
+.modal {
+    margin: 0;
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease-in-out;
+    background: linear-gradient(180deg,
+        rgba(var(--united-red), 0.1) 0%,
+        rgba(var(--united-orange), 0.1) 16.67%,
+        rgba(var(--united-yellow), 0.1) 33.33%,
+        rgba(var(--united-green), 0.1) 50%,
+        rgba(var(--united-blue), 0.1) 66.67%,
+        rgba(var(--united-indigo), 0.1) 83.33%,
+        rgba(var(--united-violet), 0.1) 100%
+    ) !important;
 }
 
 

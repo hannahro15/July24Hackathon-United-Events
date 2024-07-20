@@ -1,0 +1,66 @@
+.fc-h-event {
+    cursor: pointer;
+    background: linear-gradient(135deg,
+        rgba(var(--united-red), 0.25) 0%,
+        rgba(var(--united-orange), 0.25) 16.67%,
+        rgba(var(--united-yellow), 0.25) 33.33%,
+        rgba(var(--united-green), 0.25) 50%,
+        rgba(var(--united-blue), 0.25) 66.67%,
+        rgba(var(--united-indigo), 0.25) 83.33%,
+        rgba(var(--united-violet), 0.25) 100%
+    );
+    border: unset;
+    border-radius: 0;
+    font-weight: bolder;
+}
+
+.fc-h-event .fc-event-main {
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.fc-h-event .fc-event-main:hover {
+    color: white;
+    background-color: #F11A7B;
+    text-shadow: 1px 1px 3px black;
+}
+
+.fc .fc-daygrid-day-number {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    background-color: rgba(174, 177, 172, 0.25);
+}
+
+.fc-scroller.fc-scroller-liquid-absolute {
+    overflow: hidden;
+}
+
+.fc-view-harness.fc-view-harness-active {
+    min-height: 450px !important;
+}
+
+.fc .fc-col-header-cell-cushion {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.fc-theme-standard th {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background: linear-gradient(180deg,
+        rgba(var(--united-red), 0.1) 0%,
+        rgba(var(--united-orange), 0.1) 16.67%,
+        rgba(var(--united-yellow), 0.1) 33.33%,
+        rgba(var(--united-green), 0.1) 50%,
+        rgba(var(--united-blue), 0.1) 66.67%,
+        rgba(var(--united-indigo), 0.1) 83.33%,
+        rgba(var(--united-violet), 0.1) 100%
+    );
+}

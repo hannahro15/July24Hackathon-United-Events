@@ -1,24 +1,184 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/events.css' %}">
+{% endblock %}
+
 {% block content %}
-    <section>
-        <h2>Events Calendar</h2>
-        <p>Here is the list of upcoming events.</p>
+
+    <section class="container mt-5 p-3 bg-secondary text-white rounded shadow">
+        <div class="row">
+            <div class="col-12 mx-auto text-center">
+                <h2>Events Calendar</h2>
+                <p>Here is the list of upcoming events.</p>
+            </div>
+        </div>
     </section>
 
-    <section class="row mt-4">
-        {% for event in events %}
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{% static 'images/pride.jpg' %}" class="card-img-top" alt="event">
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text">Event {{ forloop.counter0 }}</p>
+    <section class="container my-5 p-3 bg-light bg-opacity-75 rounded shadow">
+        <div class="row">
+            <div class="col-12">
+                <!-- FullCalendar widget -->
+                <div id="events-calendar"></div>
+                <!-- Event Modal (updates dynamically) -->
+                <div class="modal fade" id="modal-event" tabindex="-1" aria-labelledby="modal-event-label" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-dark text-light" data-bs-theme="dark">
+                                <h2 class="modal-title fs-5" id="modal-event-label"></h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p id="eventDescription" class="fs-5 text-muted"></p>
+                                <p>
+                                    <strong>When?</strong>
+                                    <span id="eventDate"></span>
+                                    <br>
+                                    <strong>Where?</strong>
+                                    <span id="eventLocation"></span>
+                                    <br>
+                                    <strong>Interested:</strong>
+                                    <span id="eventInterestedCount"></span>
+                                </p>
+                                <hr>
+                                <p>
+                                    <strong>Highlights:</strong>
+                                    <br>
+                                    <span id="eventHighlights"></span>
+                                </p>
+                                <p id="eventAccessibility">
+                                    <strong>Accessibility:</strong>
+                                    <br>
+                                    <span id="eventAccessibilityInfo"></span>
+                                </p>
+                                <p>
+                                    <strong>Ticket Info:</strong>
+                                    <br>
+                                    <span id="eventTicketInfo"></span>
+                                </p>
+                                <p id="eventAdditionalNotes">
+                                    <strong>Additional Notes:</strong>
+                                    <br>
+                                    <span id="eventAdditionalNotesInfo"></span>
+                                </p>
+                                <br>
+                                <p class="text-muted">
+                                    Visit the <a id="eventWebsite" href="#" target="_blank" rel="noopener noreferrer external"><span id="eventName"></span></a> official website for detailed information and ticket purchases.
+                                </p>
+                            </div>
+                            <div class="modal-footer bg-dark text-light bg-opacity-75 d-flex justify-content-between">
+                                {% if request.user.is_authenticated %}
+                                    <a href="#" class="btn btn-primary like-event">Interested</a>
+                                {% endif %}
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close ❌</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        {% endfor %}
+        </div>
     </section>
+
 {% endblock %}
 
+
+{% block js %}
+<!-- populate the event calendar -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let eventCalendarDiv = document.getElementById("events-calendar");
+        let calendar = new FullCalendar.Calendar(eventCalendarDiv, {
+            initialView: "dayGridMonth",
+            initialDate: "{{ start_date }}",
+            headerToolbar: {
+                left: "prev,next",
+                center: "title",
+                right: "today"
+            },
+            validRange: {
+                start: new Date().toISOString().split("T")[0]  // Only allow from today onwards
+            },
+            showNonCurrentDates: false,
+            events: "/events/api/",
+            eventClick: function(data) {
+                $("#modal-event").modal("show");
+                $("#modal-event-label").text(data.event.title);
+                $("#eventName").text(data.event.title);
+
+                // Date formatting options
+                let options = { year: "numeric", month: "long", day: "numeric" };
+
+                // Parse the start and end dates
+                let startDate = new Date(data.event.start);
+                let endDate = new Date(data.event.end);
+
+                // Adjust endDate by subtracting one day for display purposes
+                endDate.setDate(endDate.getDate() - 1);
+
+                // Format the dates
+                let formattedStartDate = startDate.toLocaleDateString(undefined, options);
+                let formattedEndDate = endDate.toLocaleDateString(undefined, options);
+
+                // Show dates based on whether they are the same or different
+                if (formattedStartDate === formattedEndDate) {
+                    $("#eventDate").html(formattedStartDate);
+                } else {
+                    $("#eventDate").html(`${formattedStartDate} to ${formattedEndDate}`);
+                }
+
+                // Function to replace newlines with <br>
+                function nl2br(str) {
+                    return str.replace(/\n/g, "<br>");
+                }
+
+                // Function to slugify the location string
+                function slugify(str) {
+                    return str.replace(/[^\w\s]/g, '').replace(/\s+/g, '+');
+                }
+
+                let location = data.event.extendedProps.location;
+                let locationSlug = slugify(location);
+                let locationUrl = `https://www.google.com/maps/search/${locationSlug}+uk`;
+
+                $("#eventDescription").html(nl2br(data.event.extendedProps.description));
+                $("#eventLocation").html(`<a href="${locationUrl}" target="_blank" rel="noopener noreferrer external">${nl2br(location)}</a>`);
+                $("#eventHighlights").html(nl2br(data.event.extendedProps.highlights));
+
+                // Conditional rendering for accessibility
+                if (data.event.extendedProps.accessibility) {
+                    $("#eventAccessibilityInfo").html(nl2br(data.event.extendedProps.accessibility));
+                    $("#eventAccessibility").show();
+                } else {
+                    $("#eventAccessibilityInfo").html();
+                    $("#eventAccessibility").hide();
+                }
+
+                $("#eventTicketInfo").html(nl2br(data.event.extendedProps.ticket_info));
+                if (data.event.extendedProps.additional_notes) {
+                    $("#eventAdditionalNotesInfo").html(nl2br(data.event.extendedProps.additional_notes));
+                    $("#eventAdditionalNotes").show();
+                } else {
+                    $("#eventAdditionalNotesInfo").html();
+                    $("#eventAdditionalNotes").hide();
+                }
+                $("#eventWebsite").attr("href", data.event.extendedProps.website);
+                $("#eventInterestedCount").html(data.event.extendedProps.interested_count);
+
+                // Update the "Interested" button with the event id and text
+                let interestedButton = $(".like-event");
+                if (interestedButton.length) { // Check if the button exists (user is logged in)
+                    let interestedUrl = `{% url 'like-event' 0 %}`.replace("0", data.event.id);
+                    interestedButton.attr("href", interestedUrl);
+                    if (data.event.extendedProps.is_interested) {
+                        interestedButton.text("Not Interested 👎");
+                    } else {
+                        interestedButton.text("Interested 👍");
+                    }
+                }
+            }
+        });
+        calendar.render();
+    });
+</script>
+{% endblock %}
