@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/team.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="content-box">
+    <h2 class="team-title">Our Team</h2>
+    <div class="cards-container">
+        <!-- Team Member 1 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{% static 'images/gary.png' %}" alt="Gary" class="img-fluid">
+                    <h2>Gary</h2>
+                </div>
+                <div class="card-back">
+                    <h2>Gary Sorohan</h2>
+                    <p>Role</p>
+                    <p>GitHub</p>
+                    <p>LinkedIn</p>
+                    <p>Contribution</p>
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{% static 'images/hannah.png' %}" alt="Hannah" class="img-fluid">
+                    <h2>Hannah</h2>
+                </div>
+                <div class="card-back">
+                    <h2>Hannah Olbrich</h2>
+                    <p>Role</p>
+                    <p>GitHub</p>
+                    <p>LinkedIn</p>
+                    <p>Contribution</p>
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{% static 'images/lauren.png' %}g" alt="Lauren" class="img-fluid">
+                    <h2>Lauren</h2>
+                </div>
+                <div class="card-back">
+                    <h2>Lauren Yeung</h2>
+                    <p>Role</p>
+                    <p>GitHub</p>
+                    <p>LinkedIn</p>
+                    <p>Contribution</p>
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{% static 'images/sean.png' %}" alt="Sean" class="img-fluid">
+                    <h2>Sean</h2>
+                </div>
+                <div class="card-back">
+                    <h2>Sean Lutz</h2>
+                    <p>Role</p>
+                    <p>GitHub</p>
+                    <p>LinkedIn</p>
+                    <p>Contribution</p>
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 5 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{% static 'images/tim.png' %}" alt="Tim" class="img-fluid">
+                    <h2>Tim</h2>
+                </div>
+                <div class="card-back">
+                    <h2>Tim Nelson</h2>
+                    <p>Role</p>
+                    <p>GitHub</p>
+                    <p>LinkedIn</p>
+                    <p>Contribution</p>
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 6 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{% static 'images/trevor.png' %}" alt="Trevor" class="img-fluid">
+                    <h2>Trev</h2>
+                </div>
+                <div class="card-back">
+                    <h2>Trevor Leslie</h2>
+                    <p>Role</p>
+                    <p>GitHub</p>
+                    <p>LinkedIn</p>
+                    <p>Contribution</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

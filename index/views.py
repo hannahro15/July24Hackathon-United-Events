@@ -10,3 +10,13 @@ def index(request):
     template = "index/index.html"
     context = {}
     return render(request, template, context)
+
+
+def team(request):
+    """
+    Renders the team page.
+    """
+    # messages.success(request, "Test")
+    template = "index/team.html"
+    context = {}
+    return render(request, template, context)
