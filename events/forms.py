@@ -14,9 +14,7 @@ class EventForm(forms.ModelForm):
         labels = {
             'start_date': 'Start Date',
             'end_date': 'End Date',
-            'accessibility': 'Accessibility (Optional)',
             'ticket_info': 'Ticket Information',
-            'additional_notes': 'Additional Notes (Optional)',
-            'website': 'Website (Optional)'
+            'additional_notes': 'Additional Notes'
         }
 
