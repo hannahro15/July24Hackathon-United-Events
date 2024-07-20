@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-pride">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'index' %}">
-                    <img src="{% static 'images/logo.jpg' %}" alt="United Events" height="40">
+                    <img src="{% static 'images/logo.png' %}" alt="United Events" height="40">
                     United Events
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,34 +33,65 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" href="{% url 'index' %}">Home</a>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link text-white" href="{% url 'index' %}">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" href="{% url 'events' %}">Events</a>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link text-white" href="{% url 'events' %}">Events</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" href="{% url 'contact' %}">Contact</a>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link text-white" href="{% url 'contact' %}">Contact</a>
                         </li>
-                        {% if user.is_authenticated %}
-                            <!-- logged-in users -->
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="{% url 'profile' %}">Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="{% url 'account_logout' %}">Sign Out</a>
-                            </li>
-                        {% else %}
-                            <!-- guests -->
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="{% url 'account_signup' %}">Register</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="{% url 'account_login' %}">Sign In</a>
-                            </li>
-                        {% endif %}
-                        
-                        
+                        <li class="nav-item mx-3 dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account">
+                                Account
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end bg-secondary">
+                                {% if not request.user.is_authenticated %}
+                                    <!-- guests -->
+                                    <li class="bg-secondary">
+                                        <a href="{% url 'account_signup' %}" class="nav-link dropdown-item">
+                                            <i class="fa-solid fa-user-plus fa-fw"></i>
+                                            Register
+                                        </a>
+                                    </li>
+                                    <li class="bg-secondary">
+                                        <a href="{% url 'account_login' %}" class="nav-link dropdown-item">
+                                            <i class="fa-solid fa-sign-in-alt fa-fw"></i>
+                                            Sign In
+                                        </a>
+                                    </li>
+                                {% else %}
+                                    <!-- logged-in users -->
+                                    <li class="bg-secondary">
+                                        <a href="{% url 'profile' %}" class="nav-link dropdown-item">
+                                            <i class="fa-solid fa-user-alt fa-fw"></i>
+                                            Profile
+                                        </a>
+                                    </li>
+                                    {% if request.user.is_superuser %}
+                                        <!-- superusers / admin -->
+                                        <li class="bg-secondary">
+                                            <a href="" class="nav-link dropdown-item">
+                                                <i class="fa-solid fa-circle-plus fa-fw"></i>
+                                                Add Event
+                                            </a>
+                                        <li class="bg-secondary">
+                                            <a href="{% url 'admin:index' %}" target="_blank" rel="noopener" class="nav-link dropdown-item">
+                                                <i class="fa-solid fa-user-cog fa-fw"></i>
+                                                Django Admin
+                                            </a>
+                                        </li>
+                                    {% endif %}
+                                        <li class="bg-secondary">
+                                            <a href="{% url 'account_logout' %}" class="nav-link dropdown-item">
+                                                <i class="fa-solid fa-sign-out-alt fa-fw"></i>
+                                                Sign Out
+                                            </a>
+                                        </li>
+                                {% endif %}
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

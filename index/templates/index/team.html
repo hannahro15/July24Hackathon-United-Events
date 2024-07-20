@@ -6,115 +6,152 @@
 {% endblock %}
 
 {% block content %}
-<div class="content-box">
-    <h2 class="team-title">Our Team</h2>
-    <div class="cards-container">
-        <!-- Team Member 1 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="{% static 'images/gary.png' %}" alt="Gary" class="img-fluid">
-                    <h2>Gary</h2>
-                </div>
-                <div class="card-back">
-                    <h2>Gary Sorohan</h2>
-                    <p>Role</p>
-                    <p>GitHub</p>
-                    <p>LinkedIn</p>
-                    <p>Contribution</p>
-                </div>
+    <section class="container my-5 p-3">
+        <div class="row bg-secondary bg-opacity-75 text-white p-3 rounded shadow">
+            <div class="col text-center">
+                <h2 class="team-title">United Events Team</h2>
             </div>
         </div>
-        <!-- Team Member 2 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="{% static 'images/hannah.jpg' %}" alt="Hannah" class="img-fluid">
-                    <h2>Hannah</h2>
-                </div>
-                <div class="card-back">
-                    <h2>Hannah Olbrich</h2>
-                    <p>Role: Scrum Master</p>
-                    <div>
-                    <a href="https://github.com/hannahro15" target="_blank">My GitHub</a>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <!-- Gary -->
+            <div class="col mt-5">
+                <div class="card h-100 text-center shadow">
+                    <img src="{% static 'images/gary.png' %}" class="card-img-top img-fluid" alt="Gary">
+                    <div class="card-body">
+                        <p class="card-title fs-5 p-0 m-0">
+                            Gary Sorohan
+                            <br>
+                            <small class="fs-6 text-muted">5P Student</small>
+                        </p>
+                        <p class="card-text">Backend | DB | CRUD</p>
                     </div>
-                    <div>
-                    <a href="https://www.linkedin.com/in/hannaholbrich/" target="_blank">My LinkedIn</a>
+                    <div class="card-footer bg-secondary bg-opacity-25">
+                        <a href="https://github.com/Soro82" target="_blank" rel="noopener noreferrer external" class="btn btn-dark badge rounded-pill m-1">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/gary-sorohan" target="_blank" rel="noopener noreferrer external" class="btn btn-primary badge rounded-pill m-1">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
                     </div>
-                    <p>Scrum Master, Kanban board, wireframes, README documentation, creating availability sheet for arranging team meetings, assigning tasks to team members. 
-                        Communicating within the team in the slack channel, checking functionality, navigation, bugs, visuals and responsiveness across the 
-                        website. </p>
                 </div>
             </div>
-        </div>
-        <!-- Team Member 3 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="{% static 'images/lauren.png' %}g" alt="Lauren" class="img-fluid">
-                    <h2>Lauren</h2>
-                </div>
-                <div class="card-back">
-                    <h2>Lauren Yeung</h2>
-                    <p>Role</p>
-                    <p>GitHub</p>
-                    <p>LinkedIn</p>
-                    <p>Contribution</p>
-                </div>
-            </div>
-        </div>
-        <!-- Team Member 4 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="{% static 'images/sean.png' %}" alt="Sean" class="img-fluid">
-                    <h2>Sean</h2>
-                </div>
-                <div class="card-back">
-                    <h2>Sean Lutz</h2>
-                    <p>Role</p>
-                    <p>GitHub</p>
-                    <p>LinkedIn</p>
-                    <p>Contribution</p>
-                </div>
-            </div>
-        </div>
-        <!-- Team Member 5 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="{% static 'images/tim.png' %}" alt="Tim" class="img-fluid">
-                    <h2>Tim</h2>
-                </div>
-                <div class="card-back">
-                    <h2>Tim Nelson</h2>
-                    <p>Role</p>
-                    <p>GitHub</p>
-                    <p>LinkedIn</p>
-                    <p>Contribution</p>
-                </div>
-            </div>
-        </div>
-        <!-- Team Member 6 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="{% static 'images/trevor.png' %}" alt="Trevor" class="img-fluid">
-                    <h2>Trev</h2>
-                </div>
-                <div class="card-back">
-                    <h2>Trevor Leslie</h2>
-                    <p>L3 Jr. Dev. pupil</p>
-                    <div>
-                    <a href="https://github.com/TrevorJamesLeslie" target="_blank">My GitHub</a>
+            <!-- Hannah -->
+            <div class="col mt-5">
+                <div class="card h-100 text-center shadow">
+                    <!-- ribbon -->
+                    <div class="ribbon">
+                        <span class="bg-warning">
+                            SCRUM MASTER
+                        </span>
                     </div>
-                    <div>
-                    <a href="https://www.linkedin.com/in/trevor-leslie-12b4493a/" target="_blank">My LinkedIn</a>
+                    <img src="{% static 'images/hannah.jpg' %}" class="card-img-top img-fluid" alt="Hannah">
+                    <div class="card-body">
+                        <p class="card-title fs-5 p-0 m-0">
+                            Hannah Olbrich
+                            <br>
+                            <small class="fs-6 text-muted">4P Student</small>
+                        </p>
+                        <p class="card-text">Scrum | Agile | Wireframes | README</p>
                     </div>
-                    <p>Content creation and page layouts [HTML & CSS]</div>
+                    <div class="card-footer bg-secondary bg-opacity-25">
+                        <a href="https://github.com/hannahro15" target="_blank" rel="noopener noreferrer external" class="btn btn-dark badge rounded-pill m-1">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/hannaholbrich" target="_blank" rel="noopener noreferrer external" class="btn btn-primary badge rounded-pill m-1">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Lauren -->
+            <div class="col mt-5">
+                <div class="card h-100 text-center shadow">
+                    <img src="{% static 'images/lauren.png' %}" class="card-img-top img-fluid" alt="Lauren">
+                    <div class="card-body">
+                        <p class="card-title fs-5 p-0 m-0">
+                            Lauren Yeung
+                            <br>
+                            <small class="fs-6 text-muted">4P Student</small>
+                        </p>
+                        <p class="card-text">Frontend | Design | Contact</p>
+                    </div>
+                    <div class="card-footer bg-secondary bg-opacity-25">
+                        <a href="https://github.com/Lauren21717" target="_blank" rel="noopener noreferrer external" class="btn btn-dark badge rounded-pill m-1">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer external" class="btn btn-primary badge rounded-pill m-1">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sean -->
+            <div class="col mt-5">
+                <div class="card h-100 text-center shadow">
+                    <img src="{% static 'images/sean.png' %}" class="card-img-top img-fluid" alt="Sean">
+                    <div class="card-body">
+                        <p class="card-title fs-5 p-0 m-0">
+                            Sean Lutz
+                            <br>
+                            <small class="fs-6 text-muted">5P Alumni</small>
+                        </p>
+                        <p class="card-text">Backend | Authentication | Setup</p>
+                    </div>
+                    <div class="card-footer bg-secondary bg-opacity-25">
+                        <a href="https://github.com/primarypigments" target="_blank" rel="noopener noreferrer external" class="btn btn-dark badge rounded-pill m-1">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer external" class="btn btn-primary badge rounded-pill m-1">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tim -->
+            <div class="col mt-5">
+                <div class="card h-100 text-center shadow">
+                    <img src="{% static 'images/tim.png' %}" class="card-img-top img-fluid" alt="Tim">
+                    <div class="card-body">
+                        <p class="card-title fs-5 p-0 m-0">
+                            Tim Nelson
+                            <br>
+                            <small class="fs-6 text-muted">Mentor / Alumni</small>
+                        </p>
+                        <p class="card-text">Backend | DB | Calendar | Git Support</p>
+                    </div>
+                    <div class="card-footer bg-secondary bg-opacity-25">
+                        <a href="https://github.com/TravelTimN" target="_blank" rel="noopener noreferrer external" class="btn btn-dark badge rounded-pill m-1">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/travel-tim-nelson" target="_blank" rel="noopener noreferrer external" class="btn btn-primary badge rounded-pill m-1">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Trevor -->
+            <div class="col mt-5">
+                <div class="card h-100 text-center shadow">
+                    <img src="{% static 'images/trevor.png' %}" class="card-img-top img-fluid" alt="Trevor">
+                    <div class="card-body">
+                        <p class="card-title fs-5 p-0 m-0">
+                            Trevor Leslie
+                            <br>
+                            <small class="fs-6 text-muted">L3 Student</small>
+                        </p>
+                        <p class="card-text">Frontend | Content | Layouts</p>
+                    </div>
+                    <div class="card-footer bg-secondary bg-opacity-25">
+                        <a href="https://github.com/TrevorJamesLeslie" target="_blank" rel="noopener noreferrer external" class="btn btn-dark badge rounded-pill m-1">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/trevor-leslie-12b4493a" target="_blank" rel="noopener noreferrer external" class="btn btn-primary badge rounded-pill m-1">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
 {% endblock %}

@@ -4,17 +4,31 @@
 
 {% block content %}
 
-<div class="container my-5">
-	<div class="form-contact shadow">
-		<h2 class="form-contact-heading">We'd Love to Hear From You!</h2>
-		<form method="post" action="{% url 'contact' %}" class="needs-validation" novalidate>
-			{% csrf_token %}
-			{{ form|crispy }}
-			<div class="mt-4 d-flex justify-content-center">
-				<button type="submit" class="btn btn-dark btn-block btn-lg">Send Message</button>
-			</div>
-		</form>
-	</div>
-</div>
+<section id="contact">
+	<div class="container my-5 p-3 bg-light bg-opacity-75 rounded shadow">
+		<div class="row d-flex align-items-center">
+			<div class="col-md-6 form-section">
+				<div class="form-title mt-5">
+					<h2 class="fw-semibold fs-1 mb-3">We'd Love to Hear From You!</h2>
+					<hr class="border border-0 ">
+				</div>
+				<form action="{% url 'contact' %}" method="post" class=" d-flex flex-column align-items-start gap-4 mt-5">
+					{% csrf_token %}
+					<input type="text" id="name" name="name" placeholder="Your Name" class="contact-input ps-3 rounded-pill" required>
+					<input type="email" id="email" name="email" placeholder="Your Email" class="contact-input ps-3 rounded-pill" required>
+					<textarea id="message" name="message" placeholder="Your Message" class="contact-input ps-3 rounded-4" required></textarea>
+					<button type="submit" class="btn btn-warning submit-button rounded-pill px-5">Submit</button>
+				</form>
 
-{% endblock content %}
+			</div>
+
+			<div class="col-md-6">
+				<div class="form-img">
+					<img src="{% static 'images/contact-us-img.webp' %}" alt="Woman at laptop" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}
