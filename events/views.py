@@ -5,6 +5,7 @@ from django.http import JsonResponse
 from django.contrib import messages
 from .models import Event
 from profiles.models import Profile
+from .forms import EventForm
 
 
 def events(request):
@@ -65,3 +66,34 @@ def event_list(request):
             "interested_count": event.interested_users.count()
         })
     return JsonResponse(event_list, safe=False)
+
+
+@login_required
+def add_event(request):
+    """
+    Allow admin users to add events to the site.
+    """
+    if not request.user.is_superuser:
+        messages.error(request, "Access Denied: Invalid Credentials")
+        return redirect("index")
+
+    event_form = EventForm(request.POST or None)
+    if request.method == "POST":
+        if event_form.is_valid():
+            event_form.save()
+            messages.success(
+                request,
+                'Your event was added successfully'
+            )
+            return redirect('events')
+        else:
+            messages.error(
+                request,
+                'Error: please try to again'
+            )
+
+    template = 'add_event.html'
+    context = {
+        'event_form': event_form,
+    }
+    return render(request, template, context)
