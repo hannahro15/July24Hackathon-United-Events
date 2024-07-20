@@ -152,6 +152,13 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
 - [![ChatGPT](https://img.shields.io/badge/ChatGPT-grey?logo=chromatic&logoColor=75A99C)](https://chat.openai.com) used to help debug, troubleshoot, and explain things.
 
+## Testing
+
+### Unfixed bugs
+
+• Django security issue with vulnerabilities appearing in my terminal/Github
+ ![Security issues screenshot](static/images/bugs-screenshot.jpg)
+
 ## Database Design
 
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
