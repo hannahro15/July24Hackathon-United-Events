@@ -11,9 +11,9 @@ class Event(models.Model):
     location = models.CharField(max_length=100, null=False, blank=False)
     description = models.TextField(null=False, blank=False)
     highlights = models.TextField(null=False, blank=False)
-    accessibility = models.TextField()
+    accessibility = models.TextField(null=True, blank=True)
     ticket_info = models.TextField(null=False, blank=False)
-    additional_notes = models.TextField()
+    additional_notes = models.TextField(null=True, blank=True)
     website = models.URLField()
 
     class Meta:
