@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-12 mx-auto text-center">
                 <h2>Events Calendar</h2>
-                <p>Upcoming UK Pride Events</p>
+                <p><strong>Next Event</strong>: <span class="badge rounded-pill bg-primary">{{ first_event }}</span></p>
             </div>
         </div>
     </section>
@@ -97,7 +97,8 @@
                 right: "today"
             },
             validRange: {
-                start: new Date().toISOString().split("T")[0]  // Only allow from today onwards
+                start: new Date().toISOString().split("T")[0],  // Only allow from today onwards
+                end: "{{ end_date }}" // Only show until the last public event
             },
             showNonCurrentDates: false,
             events: "/events/api/",
