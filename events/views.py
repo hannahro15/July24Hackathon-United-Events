@@ -25,7 +25,6 @@ def events(request):
     return render(request, template, context)
 
 
-<<<<<<< Updated upstream
 @login_required
 def like_event(request, event_id):
     event = get_object_or_404(Event, id=event_id)
@@ -70,7 +69,8 @@ def event_list(request):
             "interested_count": event.interested_users.count()
         })
     return JsonResponse(event_list, safe=False)
-=======
+
+
 def add_event(request):
     """
     Allow admin users to add events to the site.
@@ -85,4 +85,3 @@ def add_event(request):
                     'Your event was added successfully'
                 )
                 return redirect('events')
->>>>>>> Stashed changes
