@@ -1,7 +1,24 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block contact %}
+{% block content %}
+    <section>
+        <h2>Events Calendar</h2>
+        <p>Here is the list of upcoming events.</p>
+    </section>
 
-Events Page
-
+    <section class="row mt-4">
+        {% for event in events %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/pride.jpg' %}" class="card-img-top" alt="event">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">Event {{ forloop.counter0 }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
 {% endblock %}
+
