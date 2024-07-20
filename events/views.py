@@ -3,8 +3,12 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.contrib import messages
+<<<<<<< Updated upstream
 from .models import Event
 from profiles.models import Profile
+=======
+from .forms import EventForm
+>>>>>>> Stashed changes
 
 
 def events(request):
@@ -21,6 +25,7 @@ def events(request):
     return render(request, template, context)
 
 
+<<<<<<< Updated upstream
 @login_required
 def like_event(request, event_id):
     event = get_object_or_404(Event, id=event_id)
@@ -65,3 +70,19 @@ def event_list(request):
             "interested_count": event.interested_users.count()
         })
     return JsonResponse(event_list, safe=False)
+=======
+def add_event(request):
+    """
+    Allow admin users to add events to the site.
+    """
+    if request.method == "POST":
+        event_form = EventForm(request.POST)
+        if event_form.is_valid():
+            event = booking_form.save(commit=False)
+                event.save()
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    'Your event was added successfully'
+                )
+                return redirect('events')
+>>>>>>> Stashed changes
