@@ -2,6 +2,127 @@
 
 {% block content %}
 
-Profile Page
+<section class="container my-5">
+    <div class="row">
+        <div class="col-xl-4">
+            <!-- Account details card-->
+            <div class="card mb-4 rounded shadow">
+                <div class="card-header bg-dark text-light">Profile Details</div>
+                <div class="card-body">
+                    <form method="POST" action="{% url 'profile' %}">
+                        {% csrf_token %}
+                        <!-- username -->
+                        <div class="mb-3">
+                            <label class="small mb-1" for="username">Username</label>
+                            <input class="form-control" id="username" name="username" type="text" placeholder="Username" value="{{ profile.user.username }}">
+                        </div>
+                        <!-- email address -->
+                        <div class="mb-3">
+                            <label class="small mb-1" for="email">Email address</label>
+                            <input class="form-control" id="email" name="email" type="email" placeholder="Email" value="{{ profile.user.email }}">
+                        </div>
+                        <!-- Save changes -->
+                        <button class="btn btn-success">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8">
+            <!-- Events the user is interested in -->
+            <div class="card mb-4 mb-xl-0 rounded shadow">
+                <div class="card-header bg-dark text-light">Interested Events</div>
+                <div class="card-body p-4">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        {% for event in events|dictsort:"start_date" %}
+                            <div class="col">
+                                <div class="card h-100 border border-success shadow">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">{{ event.name }}</h5>
+                                        <h6 class="card-subtitle mb-2 text-body-secondary">{{ event.location }}</h6>
+                                        <p class="card-text">{{ event.start_date|date:"d F, Y" }}</p>
+                                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modal-event-{{ event.id }}">
+                                            View
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Event Modal -->
+                            <div class="modal fade" id="modal-event-{{ event.id }}" tabindex="-1" aria-labelledby="modal-event-label-{{ event.id }}" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-dark text-light" data-bs-theme="dark">
+                                            <h2 class="modal-title fs-5" id="modal-event-label-{{ event.id }}">{{ event.name }}</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="fs-5 text-muted">{{ event.description }}</p>
+                                            <p>
+                                                <strong>When?</strong>
+                                                {% if event.start_date|date:"dmY" == event.end_date|date:"dmY" %}
+                                                    {{ event.start_date|date:"d F, Y" }}
+                                                {% else %}
+                                                    {{ event.start_date|date:"d F, Y" }} to {{ event.end_date|date:"d F, Y" }}
+                                                {% endif %}
+                                                <br>
+                                                <strong>Where?</strong>
+                                                <a href="https://www.google.com/maps/search/{{ event.location }}+uk" target="_blank" rel="noopener noreferrer external">{{ event.location }}</a>
+                                                <br>
+                                                <strong>Interested:</strong>
+                                                {{ event.total_interested }}
+                                            </p>
+                                            <hr>
+                                            <p>
+                                                <strong>Highlights:</strong>
+                                                <br>
+                                                {{ event.highlights|safe|linebreaksbr }}
+                                            </p>
+                                            {% if event.accessibility %}
+                                                <p>
+                                                    <strong>Accessibility:</strong>
+                                                    <br>
+                                                    {{ event.accessibility|safe|linebreaksbr }}
+                                                </p>
+                                            {% endif %}
+                                            <p>
+                                                <strong>Ticket Info:</strong>
+                                                <br>
+                                                {{ event.ticket_info|safe|linebreaksbr }}
+                                            </p>
+                                            {% if event.additional_notes %}
+                                                <p>
+                                                    <strong>Additional Notes:</strong>
+                                                    <br>
+                                                    {{ event.additional_notes|safe|linebreaksbr }}
+                                                </p>
+                                            {% endif %}
+                                            <br>
+                                            <p class="text-muted">
+                                                Visit the <a href="{{ event.website }}" target="_blank" rel="noopener noreferrer external">{{ event.name }}</a> official website for detailed information and ticket purchases.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer bg-dark text-light bg-opacity-75 d-flex justify-content-between">
+                                            <a href="{% url 'like-event' event.id %}" class="btn btn-primary">Not Interested 👎</a>
+                                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close ❌</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% empty %}
+                            <div class="col mx-auto">
+                                <div class="card h-100 border border-success shadow">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">No Events</h5>
+                                        <h6 class="card-subtitle mb-2 text-body-secondary">Check out the events page!</h6>
+                                        <a href="{% url 'events' %}" class="btn btn-outline-success">Events</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
