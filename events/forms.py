@@ -1,4 +1,4 @@
-from django import Forms
+from django import forms
 from .models import Event
 
 
@@ -15,7 +15,7 @@ class EventForm(forms.ModelForm):
             'start_date': 'Start Date',
             'end_date': 'End Date',
             'accessibility': 'Accessibility (Optional)',
-            'ticket_info', 'Ticket Information',
+            'ticket_info': 'Ticket Information',
             'additional_notes': 'Additional Notes (Optional)',
             'website': 'Website (Optional)'
         }
