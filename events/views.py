@@ -68,17 +68,32 @@ def event_list(request):
     return JsonResponse(event_list, safe=False)
 
 
+@login_required
 def add_event(request):
     """
     Allow admin users to add events to the site.
     """
+    if not request.user.is_superuser:
+        messages.error(request, "Access Denied: Invalid Credentials")
+        return redirect("index")
+
+    event_form = EventForm(request.POST or None)
     if request.method == "POST":
-        event_form = EventForm(request.POST)
         if event_form.is_valid():
-            event = booking_form.save(commit=False)
-                event.save()
-                messages.add_message(
-                    request, messages.SUCCESS,
-                    'Your event was added successfully'
-                )
-                return redirect('events')
+            event_form.save()
+            messages.success(
+                request,
+                'Your event was added successfully'
+            )
+            return redirect('events')
+        else:
+            messages.error(
+                request,
+                'Error: please try to again'
+            )
+
+    template = 'add_event.html'
+    context = {
+        'event_form': event_form,
+    }
+    return render(request, template, context)
