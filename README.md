@@ -157,7 +157,7 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 ### Unfixed bugs
 
 • Django security issue with vulnerabilities appearing in my terminal/Github
- ![Security issues screenshot](static/images/bugs-screenshot.jpg)
+ ![Security issues screenshot](static/images/bugs-screenshot.png)
 
 ## Database Design
 
