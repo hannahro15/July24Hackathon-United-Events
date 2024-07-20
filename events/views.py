@@ -13,10 +13,17 @@ def events(request):
     Displays the events calendar.
     """
     first_event = Event.objects.order_by("start_date").first()
+    last_event = Event.objects.order_by("start_date").last()
+
     start_date = first_event.start_date if first_event else datetime.now()
+    end_date = last_event.end_date if last_event else datetime.now()
+
     template = "events/events.html"
     context = {
-        "start_date": start_date.strftime("%Y-%m-%d")
+        "first_event": first_event,
+        "last_event": last_event,
+        "start_date": start_date.strftime("%Y-%m-%d"),
+        "end_date": (end_date + timedelta(days=1)).strftime("%Y-%m-%d"),
     }
 
     return render(request, template, context)
