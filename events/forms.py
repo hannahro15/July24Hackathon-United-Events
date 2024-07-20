@@ -1,13 +1,8 @@
 from django import forms
-from datetime import date
 from .models import Event
 
 
 class DateInput(forms.DateInput):
-    """
-    Allows the user to choose a date from a calender
-    in the Add Event Form.
-    """
     input_type = "date"
 
 
@@ -17,15 +12,20 @@ class EventForm(forms.ModelForm):
     """
     class Meta:
         model = Event
-        fields = ('name', 'start_date', 'end_date', 'location',
-                  'description', 'highlights', 'accessibility',
-                  'ticket_info', 'additional_notes', 'website')
-        widgets = {"start_date": DateInput(),
-                   "end_date": DateInput()}
+        widgets = {
+            "start_date": DateInput(),
+            "end_date": DateInput(),
+        }
+        fields = (
+            'name', 'start_date', 'end_date', 'location',
+            'description', 'highlights', 'accessibility',
+            'ticket_info', 'additional_notes', 'website'
+        )
         labels = {
             'start_date': 'Start Date',
             'end_date': 'End Date',
+            'accessibility': 'Accessibility (Optional)',
             'ticket_info': 'Ticket Information',
-            'additional_notes': 'Additional Notes'
+            'additional_notes': 'Additional Notes (Optional)',
+            'website': 'Website'
         }
-
