@@ -57,6 +57,45 @@ body>footer {
     position: relative;
 }
 
+
+.navbar-nav .nav-item .nav-link,
+.footer-li a {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-nav .nav-item .nav-link:not(.dropdown-toggle)::after,
+.footer-li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.footer-li a::after {
+    bottom: -5px;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after,
+.footer-li a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-link.dropdown-item:focus, .nav-link.dropdown-item:hover {
+    color: black !important;
+}
+
+.navbar-nav .nav-item .nav-link.dropdown-toggle {
+    color: white;
+    opacity: 1;
+}
+
 img.img-fluid.callout-pic {
     max-height: 30vh;
 }
@@ -84,7 +123,7 @@ img.img-fluid.callout-pic {
 
 /* ----- footer ----- */
 footer {
-    background: linear-gradient(90deg, #F11A7B, #982176);
+    background: linear-gradient(90deg, #7D7D7D, #3A3A3A);
     color: #FAFAFA;
     position: fixed;
     bottom: 0;
