@@ -201,7 +201,7 @@ It isn't a specialized tool, but with the right tags and project creation/issue 
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-![screenshot](documentation/gh-projects.png)
+![screenshot](static/images/kanban-board.png)
 
 ### GitHub Issues
 
@@ -213,11 +213,12 @@ It also helped with milestone iterations on a weekly basis.
 
 - [Open Issues](https://github.com/hannahro15/July24Hackathon-United-Events/issues) [![GitHub issues](https://img.shields.io/github/issues/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/issues)
 
-    ![screenshot](documentation/gh-issues-open.png)
+    ![screenshot](static/images/open-issues.png)
 
 - [Closed Issues](https://github.com/hannahro15/July24Hackathon-United-Events/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.png)
+    ![screenshot](static/images/closed-issues-1.png)
+    ![screenshot](static/images/closed-issues-2.png)
 
 ### MoSCoW Prioritization
 
