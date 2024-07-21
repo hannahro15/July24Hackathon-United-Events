@@ -85,6 +85,8 @@ By breaking down these user stories into more granular steps, you can ensure tha
 - As a user, I expect all the links to be working as expected across the website so I don't come across any broken links.
 - As a user, I expect the styling to be consistent across the pages so that I everything looks appealing visually.
 - As a user, I expect the website to be responsive on all different screen sizes so I can view all content and information easily.
+- As an admin, I should be able to update an Event, so that I can maintain a clean database, clean any mistakes, or remove events no longer needed.
+- As an admin, I should be able to delete an Event, so that I can maintain a clean database, clean any mistakes, or remove events no longer needed.
 
 ## Wireframes
 
@@ -102,34 +104,41 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 
 ### Existing Features
 
-- **TITLE-FOR-FEATURE-#1**
+- **HOME PAGE**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - This page introduces us to the website and its purpose. It also states what the whole website it about and its mission.
 
 ![screenshot](documentation/features/feature01.png)
 
-- **TITLE-FOR-FEATURE-#2**
+- **EVENTS PAGE**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - This events page takes the form on the calendar. Users can select events and add it to their profile if they are interested. When clicking on an event there is a pop-up which gives information on the event and a button at the bottom that users can click on to say if they are interested or not and a close button too. 
 
 ![screenshot](documentation/features/feature02.png)
 
-- **TITLE-FOR-FEATURE-#3**
+- **CONTACT PAGE**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The contact form for user to submit messages to about anything related to LGBtIA+ events on the website or queries in general. The submit button on the page goes directly to the databse.
 
 ![screenshot](documentation/features/feature03.png)
 
+- **ACCOUNT(REGISTER AND LOGIN FORMS) PAGE**
+
+    - There are two separate forms which is withi
+
+![screenshot](documentation/features/feature04.png)
+
+- **TEAM PAGE**
+    
+    - The team page is a page that features members of the team who worked on thr project in a form of a grid layout. Each card of the team member has a photo, GitHub and LinkedIn URL's and information their role and contribution to the project.
+
+![screenshot](documentation/features/feature05.png)
 
 ### Future Features
 
-- TITLE-FOR-FUTURE-FEATURE-#1
-    - Any additional notes about this feature.
-- TITLE-FOR-FUTURE-FEATURE-#2
-    - Any additional notes about this feature.
-- TITLE-FOR-FUTURE-FEATURE-#3
-    - Any additional notes about this feature.
-
+- Add in a functionality on the events page so that users can filter events by location or by type of event.
+    - This can ensure that users can select and filter what events they are interested or not interested in based on their own requirements.
+   
 ## Tools & Technologies Used
 
 - [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
