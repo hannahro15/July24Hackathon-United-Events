@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<section class="container my-5 p-3">
+    <div class="row bg-secondary-subtle p-3 rounded shadow">
+        <div class="col text-center">
+            <h2 class="team-title">Event Management</h2>
+        </div>
+    </div>
+
+
+    <div class="row my-5 p-3 bg-white bg-opacity-75 rounded shadow">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto py-2">
+            <div class="row mb-3">
+                <div class="col text-center">
+                    <a href="{% url 'add-event' %}" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        Add Event
+                    </a>
+                </div>
+            </div>
+            <ul class="list-group">
+                {% for event in events|dictsort:"start_date" reversed %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center {% if event.end_date < today %}bg-secondary-subtle text-muted{% endif %}">
+                        <div id="event-info">
+                            <h5 class="mb-1">🏳️‍🌈 {{ event.name }}</h5>
+                            <small>{{ event.start_date }}</small>
+                        </div>
+                        <div id="event-tools">
+                        {% if event.end_date >= today %}
+                            <a href="{% url 'edit-event' event.id %}" class="btn btn-success btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <!-- <a href="{% url 'delete-event' event.id %}" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash-can"></i></a> -->
+                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal-delete-event-{{ forloop.counter }}">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                            <!-- Delete Event Modal -->
+                            <div class="modal fade" id="modal-delete-event-{{ forloop.counter }}" tabindex="-1" aria-labelledby="modal-delete-event-label-{{ forloop.counter }}" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-dark text-light" data-bs-theme="dark">
+                                            <h5 class="modal-title fs-5" id="modal-delete-event-label-{{ forloop.counter }}">Delete Event</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure you want to delete this event?
+                                            <br><br>
+                                            Event: <strong>{{ event.name }}</strong>
+                                            <br>
+                                            Date: <strong>{{ event.start_date }}</strong>
+                                            <br><br>
+                                            <span class="text-muted">This is permanent and cannot be undone.</span>
+                                        </div>
+                                        <div class="modal-footer bg-dark-subtle">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+                                            <a href="{% url 'delete-event' event.id %}" class="btn btn-danger">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <span class="text-muted">COMPLETED</span>
+                        {% endif %}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
