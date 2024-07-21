@@ -96,11 +96,45 @@ def add_event(request):
         else:
             messages.error(
                 request,
-                'Error: please try to again'
+                'Error: Please try again'
             )
 
     template = 'events/add_event.html'
     context = {
         'event_form': event_form,
+    }
+    return render(request, template, context)
+
+
+@login_required
+def edit_event(request, event_id):
+    """
+    Allow admin users to edit events on the site.
+    """
+    if not request.user.is_superuser:
+        messages.error(request, "Access Denied: Invalid Credentials")
+        return redirect("index")
+
+    event = get_object_or_404(Event, id=event_id)
+    form = EventForm(instance=event)
+
+    form = EventForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request,
+                'Your event was updated successfully'
+            )
+            return redirect('events')
+        else:
+            messages.error(
+                request,
+                'Error: Please try again'
+            )
+
+    template = 'events/edit_event.html'
+    context = {
+        'form': form, 'event': event
     }
     return render(request, template, context)
