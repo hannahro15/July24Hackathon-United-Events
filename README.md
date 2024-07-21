@@ -1,6 +1,6 @@
 # [UNITED EVENTS](https://pending.herokuapp.com)
 
-An events based project for the LGBTIA+ society which has a calendar where you can select events and register events for them. 
+An events based project for the LGBTIA+ society which has a calendar where you can select events and register events for theme. 
 
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/commits/main)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/commits/main)
@@ -108,36 +108,61 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 
     - This page introduces us to the website and its purpose. It also states what the whole website it about and its mission.
 
-![screenshot](documentation/features/feature01.png)
+![screenshot](documentation/other-images/home-page-screenshot.png)
 
 - **EVENTS PAGE**
 
     - This events page takes the form on the calendar. Users can select events and add it to their profile if they are interested. When clicking on an event there is a pop-up which gives information on the event and a button at the bottom that users can click on to say if they are interested or not and a close button too. 
 
-![screenshot](documentation/features/feature02.png)
+![screenshot](documentation/other-images/events-calendar-screenshot.png)
 
 - **CONTACT PAGE**
 
     - The contact form for user to submit messages to about anything related to LGBTIA+ events on the website or queries in general. The submit button on the page goes directly to the databse.
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/other-images/contact-page-screenshot.png)
 
 - **ACCOUNT(REGISTER AND LOGIN FORMS) PAGE**
 
     - There are two separate forms which is withi
 
-![screenshot](documentation/features/feature04.png)
+![screenshot](documentation/other-images/register-form-screenshot.png)
+![screenshot](documentation/other-images/sign-in-screenshot.png)
 
 - **TEAM PAGE**
     
     - The team page is a page that features members of the team who worked on thr project in a form of a grid layout. Each card of the team member has a photo, GitHub and LinkedIn URL's and information their role and contribution to the project.
 
-![screenshot](documentation/features/feature05.png)
+![screenshot](documentation/other-images/team-page-screenshot.png)
+
+- **NAVBAR**
+  
+![]()
+
+- **FOOTER**
+
+![screenshot](documentation/other-images/footer-screenshot.png)
+
+- **USER PROFILE PAGE**
+
+- This page is where a user can add or remove events to their profile.
+
+![screenshot](documentation/other-images/user-profile-screenshot.png)
+
+- **EVENTS ADMIN PAGE**
+
+- This is where the admins can add or update, or delete events, so the calendar is updated with the most relevant events.
+
+![screenshot](documentation/other-images/events-admin-1-screenshot.png)
+![screenshot](documentation/other-images/events-admin-2-screenshot.png)
+![screenshot](documentation/other-images/events-admin-3-screenshot.png)
+
 
 ### Future Features
 
 - Add in a functionality on the events page so that users can filter events by location or by type of event.
     - This can ensure that users can select and filter what events they are interested or not interested in based on their own requirements.
+- Add more styling to the register and login page 
    
 ## Tools & Technologies Used
 
