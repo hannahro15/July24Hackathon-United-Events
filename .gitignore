@@ -8,3 +8,5 @@ node_modules/
 .github/
 .gitpod*
 django_errors.log
+.vscode/
+settings.json
