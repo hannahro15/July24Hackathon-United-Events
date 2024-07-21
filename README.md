@@ -191,7 +191,7 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 ### Unfixed bugs
 
 • Django security issue with vulnerabilities appearing in my terminal/Github
- ![Security issues screenshot](static/images/bugs-screenshot.png)
+ ![Security issues screenshot](documentation/other-images/bugs-screenshot.png)
 
 ## Database Design
 
@@ -235,7 +235,7 @@ It isn't a specialized tool, but with the right tags and project creation/issue 
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-![screenshot](static/images/kanban-board.png)
+![screenshot](documentation/other-images/kanban-board.png)
 
 ### GitHub Issues
 
@@ -247,12 +247,12 @@ It also helped with milestone iterations on a weekly basis.
 
 - [Open Issues](https://github.com/hannahro15/July24Hackathon-United-Events/issues) [![GitHub issues](https://img.shields.io/github/issues/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/issues)
 
-    ![screenshot](static/images/open-issues.png)
+    ![screenshot](documentation/other-images/open-issues.png)
 
 - [Closed Issues](https://github.com/hannahro15/July24Hackathon-United-Events/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](static/images/closed-issues-1.png)
-    ![screenshot](static/images/closed-issues-2.png)
+    ![screenshot](documentation/other-images/closed-issues-1.png)
+    ![screenshot](documentation/other-images/closed-issues-2.png)
 
 ### MoSCoW Prioritization
 
