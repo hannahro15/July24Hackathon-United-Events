@@ -117,8 +117,6 @@ def edit_event(request, event_id):
 
     event = get_object_or_404(Event, id=event_id)
     form = EventForm(instance=event)
-
-    form = EventForm(request.POST or None)
     if request.method == "POST":
         if form.is_valid():
             form.save()
@@ -135,12 +133,13 @@ def edit_event(request, event_id):
 
     template = 'events/edit_event.html'
     context = {
-        'form': form, 'event': event
+        'form': form,
+        'event': event
     }
     return render(request, template, context)
 
 
-    @login_required
+@login_required
 def delete_event(request, event_id):
     """
     Allow admin users to edit events on the site.
@@ -153,16 +152,11 @@ def delete_event(request, event_id):
 
     if request.method == "POST":
         event.delete()
-            messages.success(
-                request,
-                'Event deleted successfully'
-            )
-            return redirect('events')
-        else:
-            messages.error(
-                request,
-                'Error: Please try again'
-            )
+        messages.success(
+            request,
+            'Event deleted successfully'
+        )
+        return redirect('events')
 
     template = 'events/delete_event.html'
     context = {
