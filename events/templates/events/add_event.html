@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<section class="container my-5 p-3">
+    <div class="row bg-secondary bg-opacity-75 text-white p-3 rounded shadow">
+        <div class="col text-center">
+            <h2 class="team-title">Add Event</h2>
+        </div>
+    </div>
+
+
+    <div class="row my-5 p-3 bg-white bg-opacity-75 rounded shadow">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto py-5">
+            <form method="post">
+                {% csrf_token %}
+                {{ event_form|crispy }}
+                <button class="btn btn-success" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block js %}
+<script>
+    // ensure end_date is on/after start-date
+    $(window).on("load", function() {
+        let today = new Date();
+        let tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + 1);
+
+        // Format tomorrow's date to YYYY-MM-DD
+        let day = ("0" + tomorrow.getDate()).slice(-2);
+        let month = ("0" + (tomorrow.getMonth() + 1)).slice(-2);
+        let year = tomorrow.getFullYear();
+        let tomorrowFormatted = `${year}-${month}-${day}`;
+
+        // Set the min attribute for the start date to tomorrow's date
+        $("#id_start_date").attr("min", tomorrowFormatted);
+
+        // Check if start_date is empty on load
+        if ($("#id_start_date").val() == "") {
+            $("#id_end_date").prop("disabled", true).val("");
+        } else if ($("#id_end_date").val() != "") {
+            $("#id_end_date").prop("disabled", false);
+        }
+    });
+
+    $("#id_start_date").on("change", setEndDateMin);
+
+    function setEndDateMin() {
+        let startDate = $("#id_start_date").val();
+        if (startDate != "") {
+            $("#id_end_date").prop("disabled", false).val(startDate);
+        } else {
+            $("#id_end_date").prop("disabled", true).val("");
+        }
+        $("#id_end_date").prop("min", startDate);
+    }
+</script>
+{% endblock %}
+
+

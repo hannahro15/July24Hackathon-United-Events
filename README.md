@@ -152,6 +152,13 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
 - [![ChatGPT](https://img.shields.io/badge/ChatGPT-grey?logo=chromatic&logoColor=75A99C)](https://chat.openai.com) used to help debug, troubleshoot, and explain things.
 
+## Testing
+
+### Unfixed bugs
+
+• Django security issue with vulnerabilities appearing in my terminal/Github
+ ![Security issues screenshot](static/images/bugs-screenshot.png)
+
 ## Database Design
 
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
@@ -194,7 +201,7 @@ It isn't a specialized tool, but with the right tags and project creation/issue 
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-![screenshot](documentation/gh-projects.png)
+![screenshot](static/images/kanban-board.png)
 
 ### GitHub Issues
 
@@ -206,11 +213,12 @@ It also helped with milestone iterations on a weekly basis.
 
 - [Open Issues](https://github.com/hannahro15/July24Hackathon-United-Events/issues) [![GitHub issues](https://img.shields.io/github/issues/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/issues)
 
-    ![screenshot](documentation/gh-issues-open.png)
+    ![screenshot](static/images/open-issues.png)
 
 - [Closed Issues](https://github.com/hannahro15/July24Hackathon-United-Events/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.png)
+    ![screenshot](static/images/closed-issues-1.png)
+    ![screenshot](static/images/closed-issues-2.png)
 
 ### MoSCoW Prioritization
 
