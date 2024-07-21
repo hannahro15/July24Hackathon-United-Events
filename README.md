@@ -1,6 +1,6 @@
 # [UNITED EVENTS](https://pending.herokuapp.com)
 
-An events based project for the LGBTIA+ society which has a calendar where you can select events and register events for theme. 
+An events based project for the LGBTIA+ society which has a calendar where you can select events and register events for theme. There is a register and login form on the website too where users can create an account and login. There is also a home page, contact page, and a team page too!
 
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/commits/main)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/commits/main)
