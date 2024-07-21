@@ -118,7 +118,7 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 
 - **CONTACT PAGE**
 
-    - The contact form for user to submit messages to about anything related to LGBtIA+ events on the website or queries in general. The submit button on the page goes directly to the databse.
+    - The contact form for user to submit messages to about anything related to LGBTIA+ events on the website or queries in general. The submit button on the page goes directly to the databse.
 
 ![screenshot](documentation/features/feature03.png)
 
@@ -428,7 +428,6 @@ A huge shout out to our fellow team members:
 - Gary Sorohan: [GitHub](https://github.com/Soro82)
 - Hannah Olbrich: [GitHub](https://github.com/hannahro15)
 - Lauren Yeung: [GitHub](https://github.com/Lauren21717)
-- Nikola Simic: [GitHub](TBC)
 - Sean Lutz: [GitHub](https://github.com/primarypigments)
 - Tim Nelson: [GitHub](https://github.com/TravelTimN)
 - Trevor Leslie: [GitHub](https://github.com/TrevorJamesLeslie)
