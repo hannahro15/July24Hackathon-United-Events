@@ -17,7 +17,7 @@ class Event(models.Model):
     website = models.URLField()
 
     class Meta:
-        ordering = ["start_date", "location", "name"]
+        ordering = ["-start_date", "location", "name"]
 
     def __str__(self):
         return self.name

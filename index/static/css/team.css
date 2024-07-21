@@ -19,7 +19,7 @@
 
 .ribbon span {
     font-size: 0.75em;
-    color: black;
+    color: rgba(var(--black), 1);
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
@@ -27,7 +27,7 @@
     transform: rotate(45deg);
     width: 125px;
     display: block;
-    box-shadow: 0 3px 10px -5px black;
+    box-shadow: 0 3px 10px -5px rgba(var(--black), 1);
     position: absolute;
     top: 17px;
     right: -29px;
