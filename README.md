@@ -1,6 +1,6 @@
 # [UNITED EVENTS](https://united-events-a9a097150c85.herokuapp.com)
 
-An events based project for the LGBTQIA+ society which has a calendar where you can select events and register events for theme. There is a register and login form on the website too where users can create an account and login. There is also a home page, contact page, and a team page too!
+An events based project for the LGBTQIA+ society which has a pre-populated events; clicking on those events within the calendar pops up a modal offering much more detail, including links to official invidual event websites. There is both a registration form and a login form on the website, allowing users to create and log in to their personal accounts. This enables them to express interest in specific events directly from the calendar modals. There is also a home page, contact page and a team page too!
 
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/commits/main)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/commits/main)
@@ -46,6 +46,7 @@ We've used [coolors.co](https://coolors.co/f11a7b-982176-006577-ffc953-000000-fa
 
 
 ### Typography
+NO MENTION OF MONTSERRAT?
 
 - [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
 
@@ -124,7 +125,7 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 
 - **HOME PAGE**
 
-    - This page introduces us to the website and its purpose. It also states what the whole website it about and its mission.
+    - This page introduces us to the website and its purpose. It also states what the whole website is about and its mission.
 
 ![screenshot](documentation/other-images/home-page-screenshot.png)
 
@@ -136,7 +137,7 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 
 - **CONTACT PAGE**
 
-    - The contact form for user to submit messages to about anything related to LGBTIA+ events on the website or queries in general. The submit button on the page goes directly to the databse.
+    - The contact form for users to submit messages about anything related to LGBTIA+ events on the website or queries in general. The submit button on the page goes directly to the database.
 
 ![screenshot](documentation/other-images/contact-page-screenshot.png)
 
@@ -149,7 +150,7 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 
 - **TEAM PAGE**
     
-    - The team page is a page that features members of the team who worked on thr project in a form of a grid layout. Each card of the team member has a photo, GitHub and LinkedIn URL's and information their role and contribution to the project.
+    - The team page is a page that features members of the team who worked on the project in a form of a grid layout. Each team member card shows their photo, GitHub and LinkedIn URL's and outlines their individual contributions to the group project.
 
 ![screenshot](documentation/other-images/team-page-screenshot.png)
 
@@ -172,7 +173,7 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 
 - **EVENTS ADMIN PAGE**
 
-- This is where the admins can add or update, or delete events, so the calendar is updated with the most relevant events.
+- This is where the admins can add, update or delete events, to keep the calendar 'current' & relevant.
 
     - Manage Events
     ![screenshot](documentation/other-images/event-management.png)
@@ -351,7 +352,7 @@ erDiagram
 [GitHub Projects](https://github.com/users/hannahro15/projects/3) served as an Agile tool for this project.
 It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
 
-Through it, user stories, issues, and tasks were planned, then tracked on a daily basis using the basic Kanban board.
+Through it, user stories, issues & tasks were planned and then tracked on a daily basis using the basic Kanban board.
 
 ![screenshot](documentation/other-images/kanban-board.png)
 
