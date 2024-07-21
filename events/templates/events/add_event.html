@@ -3,7 +3,7 @@
 
 {% block content %}
 <section class="container my-5 p-3">
-    <div class="row bg-secondary bg-opacity-75 text-white p-3 rounded shadow">
+    <div class="row bg-secondary-subtle p-3 rounded shadow">
         <div class="col text-center">
             <h2 class="team-title">Add Event</h2>
         </div>
@@ -15,7 +15,8 @@
             <form method="post">
                 {% csrf_token %}
                 {{ event_form|crispy }}
-                <button class="btn btn-success" type="submit">Submit</button>
+                <button class="btn btn-success m-1" type="submit">Submit</button>
+                <a href="{% url 'manage-events' %}" class="btn btn-danger m-1">Cancel</a>
             </form>
         </div>
     </div>

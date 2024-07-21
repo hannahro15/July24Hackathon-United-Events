@@ -7,11 +7,19 @@
 
 {% block content %}
 
-    <section class="container mt-5 p-3 bg-secondary text-white rounded shadow">
+    <section class="container mt-5 p-3 bg-secondary-subtle rounded shadow">
         <div class="row">
             <div class="col-12 mx-auto text-center">
                 <h2>Events Calendar</h2>
-                <p><strong>Next Event</strong>: <span class="badge rounded-pill bg-primary">{{ first_event }}</span></p>
+                {% if events_exist %}
+                    <p class="fw-bold">
+                        Next Event:
+                        <br>
+                        <span class="text-primary">{{ first_event.start_date|date:"d F, Y" }}</span>
+                        <br>
+                        <span class="text-primary">🏳️‍🌈 {{ first_event }} 🏳️‍🌈</span>
+                    </p>
+                {% endif %}
             </div>
         </div>
     </section>
@@ -19,6 +27,7 @@
     <section class="container my-5 p-3 bg-light bg-opacity-75 rounded shadow">
         <div class="row">
             <div class="col-12">
+                {% if events_exist %}
                 <!-- FullCalendar widget -->
                 <div id="events-calendar"></div>
                 <!-- Event Modal (updates dynamically) -->
@@ -26,7 +35,7 @@
                     <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header bg-dark text-light" data-bs-theme="dark">
-                                <h2 class="modal-title fs-5" id="modal-event-label"></h2>
+                                <h2 class="modal-title fs-5" id="modal-event-label">Event</h2>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -70,12 +79,19 @@
                             <div class="modal-footer bg-dark text-light bg-opacity-75 d-flex justify-content-between">
                                 {% if request.user.is_authenticated %}
                                     <a href="#" class="btn btn-primary like-event">Interested</a>
+                                {% else %}
+                                <span class="text-white">
+                                    <a href="{% url 'account_login' %}" class="text-warning">Login</a> to express interest in this event!
+                                </span>
                                 {% endif %}
                                 <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close ❌</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                {% else %}
+                    <p class="text-center text-danger mt-5">No events found.</p>
+                {% endif %}
             </div>
         </div>
     </section>
@@ -90,15 +106,15 @@
         let eventCalendarDiv = document.getElementById("events-calendar");
         let calendar = new FullCalendar.Calendar(eventCalendarDiv, {
             initialView: "dayGridMonth",
-            initialDate: "{{ start_date }}",
+            initialDate: new Date(),
             headerToolbar: {
-                left: "prev,next",
+                left: "prev",
                 center: "title",
-                right: "today"
+                right: "next"
             },
             validRange: {
-                start: new Date().toISOString().split("T")[0],  // Only allow from today onwards
-                end: "{{ end_date }}" // Only show until the last public event
+                start: "{{ start_date }}",
+                end: "{{ end_date }}"
             },
             showNonCurrentDates: false,
             events: "/events/api/",

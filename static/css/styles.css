@@ -1,18 +1,31 @@
 :root {
-    --united-red: 255, 0, 0;
-    --united-orange: 255, 127, 0;
-    --united-yellow: 255, 255, 0;
-    --united-green: 0, 255, 0;
-    --united-blue: 0, 0, 255;
-    --united-indigo: 75, 0, 130;
-    --united-violet: 139, 0, 255;
+    --black: 0, 0, 0; /* #000000 */
+    --white: 255, 255, 255; /* #FFFFFF */
+    --offwhite: 250, 250, 250; /* #FAFAFA */
+
+    --united-red: 255, 0, 0; /* #FF0000 */
+    --united-orange: 255, 127, 0; /* #FF7F00 */
+    --united-yellow: 255, 255, 0; /* #FFFF00 */
+    --united-green: 0, 255, 0; /* #00FF00 */
+    --united-blue: 0, 0, 255; /* #0000FF */
+    --united-indigo: 75, 0, 130; /* #4B0082 */
+    --united-violet: 139, 0, 255; /* #8B00FF */
+
+    --united-grey-light: 125, 125, 125; /* #7D7D7D */
+    --united-grey-dark: 58, 58, 58; /* #3A3A3A */
+
+    --united-primary: 241, 26, 123; /* #F11A7B */
+    --united-secondary: 152, 33, 118; /* #982176 */
+    --united-tertiary: 0, 101, 119;  /* #006577 */
+    --united-quaternary: 255, 201, 83; /* #FFC953 */
 }
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Lato", Arial, sans-serif;
     text-decoration: none !important;
 }
 
@@ -42,17 +55,17 @@ body>footer {
 }
 
 .navbar {
-    background: linear-gradient(90deg, #F11A7B, #982176);
+    background: linear-gradient(90deg, rgba(var(--united-primary)), rgba(var(--united-secondary)));
 }
 
 .navbar li a {
-    color: #FAFAFA;
+    color: rgba(var(--offwhite), 1);
 }
 
 /* ----- callout ----- */
 #callout {
-    background: linear-gradient(90deg, #F11A7B, #982176);
-    color: #FAFAFA;
+    background: linear-gradient(90deg, rgba(var(--united-primary)), rgba(var(--united-secondary), 1));
+    color: rgba(var(--offwhite), 1);
     height: 50vh;
     position: relative;
 }
@@ -72,7 +85,7 @@ body>footer {
     bottom: 5px;
     width: 100%;
     height: 3px;
-    background-color: white;
+    background-color: rgba(var(--white), 1);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -88,7 +101,7 @@ body>footer {
 }
 
 .nav-link.dropdown-item:focus, .nav-link.dropdown-item:hover {
-    color: black !important;
+    color: rgba(var(--black), 1) !important;
 }
 
 .navbar-nav .nav-item .nav-link.dropdown-toggle {
@@ -118,13 +131,13 @@ img.img-fluid.callout-pic {
 }
 
 .custom-shape-divider-bottom-1721367110 .shape-fill {
-    fill: #FFFFFF;
+    fill: rgba(var(--white), 1);
 }
 
 /* ----- footer ----- */
 footer {
-    background: linear-gradient(90deg, #7D7D7D, #3A3A3A);
-    color: #FAFAFA;
+    background: linear-gradient(90deg, rgba(var(--united-grey-light)), rgba(var(--united-grey-dark), 1));
+    color: rgba(var(--offwhite), 1);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -143,16 +156,16 @@ footer {
 
 .footer-li li a {
     text-decoration: none;
-    color: #fff;
+    color: rgba(var(--white), 1);
 }
 
 /* ----- contact page ----- */
 .form-title h2 {
-    color: #006577;
+    color: rgba(var(--united-tertiary), 1);
 }
 
 .form-title hr {
-    background-color: #982176;
+    background-color: rgba(var(--united-secondary), 1);
     height: 0.2rem;
     width: 100%;
 }
@@ -162,7 +175,7 @@ footer {
     height: 3.5rem;
     border: none;
     outline: none;
-    background-color: #fbefd6;
+    background-color: rgba(var(--united-quaternary), 0.25);
 }
 
 .form-section textarea {
@@ -170,12 +183,12 @@ footer {
 }
 
 .contact-input:focus {
-    border: 0.2rem solid #ffc953;
+    border: 0.2rem solid rgba(var(--united-quaternary), 1);
 }
 
 .contact-input::placeholder {
     padding: 1rem;
-    color: #3e001fa8;
+    color: rgba(var(--united-tertiary), 1);
 }
 
 /* menu modal images */
@@ -194,32 +207,32 @@ footer {
 
 .form-signup {
     max-width: 600px;
-    background: #fff;
+    background: rgba(var(--white), 1);
     padding: 2rem;
     border-radius: 0.5rem;
-    border: 1px solid #ced4da;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(var(--united-grey-light), 1);
+    box-shadow: 0 4px 6px rgba(var(--black), 0.1);
     margin: auto;
 }
 
 .form-account-login {
     max-width: 600px;
-    background: #fff;
+    background: rgba(var(--white), 1);
     padding: 2rem;
     border-radius: 0.5rem;
-    border: 1px solid #ced4da;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(var(--united-grey-light), 1);
+    box-shadow: 0 4px 6px rgba(var(--black), 0.1);
     margin: auto;
 }
 
 
 .form-account {
     max-width: 600px;
-    background: #fff;
+    background: rgba(var(--white), 1);
     padding: 2rem;
     border-radius: 0.5rem;
-    border: 1px solid #ced4da;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(var(--united-grey-light), 1);
+    box-shadow: 0 4px 6px rgba(var(--black), 0.1);
     margin: auto;
 }
 
@@ -231,11 +244,11 @@ footer {
 
 .form-contact {
     max-width: 600px;
-    background: #fff;
+    background: rgba(var(--white), 1);
     padding: 2rem;
     border-radius: 0.5rem;
-    border: 1px solid #ced4da;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(var(--united-grey-light), 1);
+    box-shadow: 0 4px 6px rgba(var(--black), 0.1);
     margin: 20px auto;
 }
 
@@ -345,35 +358,12 @@ aside#overlay.hide {
     .card-registration .select-arrow {
         top: 13px;
     }
-
-    .bg-grey {
-        background-color: #eae8e8;
-    }
 }
 
 .navbar-toggler {
-    color: white;
+    color: rgba(var(--white), 1);
 }
 
 .navbar-toggler .fa-solid {
-    color: white;
-}
-
-@page { margin: 2cm }
-P { margin-bottom: 0.21cm }
-P.western { so-language: en-GB }
-H3 { margin-bottom: 0.21cm }
-H3.western { so-language: en-GB }
-H3.cjk { font-family: "SimSun" }
-H3.ctl { font-family: "Arial" }
-H4 { margin-bottom: 0.21cm }
-H4.western { so-language: en-GB }
-H4.cjk { font-family: "SimSun" }
-H4.ctl { font-family: "Arial" }
-  
-li
-{
-    /* Adjust line-height and padding for vertical alignment */
-    line-height: 1.5; /* Adjust line height as needed */
-    padding-top: 0.2em; /* Adjust padding as needed */
+    color: rgba(var(--white), 1);
 }
