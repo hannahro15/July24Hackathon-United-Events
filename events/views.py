@@ -138,3 +138,34 @@ def edit_event(request, event_id):
         'form': form, 'event': event
     }
     return render(request, template, context)
+
+
+    @login_required
+def delete_event(request, event_id):
+    """
+    Allow admin users to edit events on the site.
+    """
+    if not request.user.is_superuser:
+        messages.error(request, "Access Denied: Invalid Credentials")
+        return redirect("index")
+
+    event = get_object_or_404(Event, id=event_id)
+
+    if request.method == "POST":
+        event.delete()
+            messages.success(
+                request,
+                'Event deleted successfully'
+            )
+            return redirect('events')
+        else:
+            messages.error(
+                request,
+                'Error: Please try again'
+            )
+
+    template = 'events/delete_event.html'
+    context = {
+        'event': event
+    }
+    return render(request, template, context)
