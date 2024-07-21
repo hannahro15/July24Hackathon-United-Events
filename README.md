@@ -1,24 +1,44 @@
-# [UNITED EVENTS](https://pending.herokuapp.com)
+# [UNITED EVENTS](https://united-events-a9a097150c85.herokuapp.com)
 
 An events based project for the LGBTIA+ society which has a calendar where you can select events and register events for theme. There is a register and login form on the website too where users can create an account and login. There is also a home page, contact page, and a team page too!
 
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/commits/main)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/commits/main)
-[![GitHub repo size](https://img.shields.io/github/repo-size/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events)
 
 
-![screenshot](documentation/mockup.png)
+[![GitHub contributors](https://img.shields.io/github/contributors/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events)
+[![GitHub PRs](https://img.shields.io/github/issues-pr-closed/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/commits/main)
 
-source: [amiresponsive](https://ui.dev/amiresponsive?url=https://pending.herokuapp.com)
 
 ## UX
 
 ### Colour Scheme
 
-- `#??????` used for primary text.
-- `#??????` used for primary highlights.
-- `#??????` used for secondary text.
-- `#??????` used for secondary highlights.
+We've used CSS for the colours to simplify switching theme colours quickly (if necessary).
+
+```css
+:root {
+    --black: 0, 0, 0; /* #000000 */
+    --white: 255, 255, 255; /* #FFFFFF */
+    --offwhite: 250, 250, 250; /* #FAFAFA */
+
+    --united-red: 255, 0, 0; /* #FF0000 */
+    --united-orange: 255, 127, 0; /* #FF7F00 */
+    --united-yellow: 255, 255, 0; /* #FFFF00 */
+    --united-green: 0, 255, 0; /* #00FF00 */
+    --united-blue: 0, 0, 255; /* #0000FF */
+    --united-indigo: 75, 0, 130; /* #4B0082 */
+    --united-violet: 139, 0, 255; /* #8B00FF */
+
+    --united-grey-light: 125, 125, 125; /* #7D7D7D */
+    --united-grey-dark: 58, 58, 58; /* #3A3A3A */
+
+    --united-primary: 241, 26, 123; /* #F11A7B */
+    --united-secondary: 152, 33, 118; /* #982176 */
+    --united-tertiary: 0, 101, 119;  /* #006577 */
+    --united-quaternary: 255, 201, 83; /* #FFC953 */
+}
+```
 
 We've used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate our colour palette.
 
@@ -158,6 +178,17 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 ![screenshot](documentation/other-images/events-admin-3-screenshot.png)
 
 
+- **ERROR PAGES**
+
+    - We have included error handling for the following pages:
+
+    | error | screenshot |
+    | ---- | --- |
+    | 400 | ![screenshot](documentation/errors/400.png) |
+    | 403 | ![screenshot](documentation/errors/403.png) |
+    | 404 | ![screenshot](documentation/errors/404.png) |
+    | 500 | ![screenshot](documentation/errors/500.png) |
+
 ### Future Features
 
 - Add in a functionality on the events page so that users can filter events by location or by type of event.
@@ -169,7 +200,7 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 - [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [![GitHub](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) used for secure online code storage.
 - [![Gitpod](https://img.shields.io/badge/Gitpod-grey?logo=gitpod&logoColor=FFAE33)](https://gitpod.io) used as a cloud-based IDE for development.
-- [![VSCode](https://img.shields.io/badge/VSCode-grey?logo=visualstudiocode&logoColor=007ACC)](https://code.visualstudio.com) used as a local IDE for development.
+- [![VSCode](https://img.shields.io/badge/VSCode-grey?logo=htmx&logoColor=007ACC)](https://code.visualstudio.com) used as a local IDE for development.
 - [![HTML](https://img.shields.io/badge/HTML-grey?logo=html5&logoColor=E34F26)](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [![CSS](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [![JavaScript](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) used for user interaction on the site.
@@ -180,7 +211,6 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 - [![Django](https://img.shields.io/badge/Django-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) used as the Python framework for the site.
 - [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-grey?logo=postgresql&logoColor=4169E1)](https://www.postgresql.org) used as the relational database management.
 - [![PostgreSQL by Code Institute](https://img.shields.io/badge/PostgreSQL_by_Code_Institute-grey?logo=okta&logoColor=F05223)](https://dbs.ci-dbs.net) used as the Postgres database from Code Institute.
-- [![Cloudinary](https://img.shields.io/badge/Cloudinary-grey?logo=cloudinary&logoColor=3448C5)](https://cloudinary.com) used for online static file storage.
 - [![WhiteNoise](https://img.shields.io/badge/WhiteNoise-grey?logo=python&logoColor=FFFFFF)](https://whitenoise.readthedocs.io) used for serving static files with Heroku.
 - [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
@@ -188,9 +218,72 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 
 ## Testing
 
+### Code Validation
+
+#### HTML
+
+We have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate our HTML files.
+
+| Page | W3C URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| index | [W3C](https://validator.w3.org/nu/?doc=https://united-events-a9a097150c85.herokuapp.com/) | ![screenshot](documentation/validation/html-index.png) | Fixed "section lacks heading" warning |
+| events | [W3C](https://validator.w3.org/nu/?doc=https://united-events-a9a097150c85.herokuapp.com/events/) | ![screenshot](documentation/validation/html-events.png) | Fixed "section lacks heading" warning |
+| contact | [W3C](https://validator.w3.org/nu/?doc=https://united-events-a9a097150c85.herokuapp.com/contact/) | ![screenshot](documentation/validation/html-contact.png) | ✅ |
+| team | [W3C](https://validator.w3.org/nu/?doc=https://united-events-a9a097150c85.herokuapp.com/team/) | ![screenshot](documentation/validation/html-team.png) | ✅ |
+| profile | N/A | ![screenshot](documentation/validation/html-profile.png) | Fixed invalid spaces in href error |
+| event management | N/A | ![screenshot](documentation/validation/html-event-management.png) | Fixed duplicate ID errors |
+| add event | N/A | ![screenshot](documentation/validation/html-add-event.png) | ✅ |
+| edit event | N/A | ![screenshot](documentation/validation/html-edit-event.png) | ✅ |
+
+#### CSS
+
+We have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate our CSS files.
+
+| File | Jigsaw URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| styles.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Funited-events-a9a097150c85.herokuapp.com) | ![screenshot](documentation/validation/css-styles.png) | ✅ |
+| events.css | N/A | ![screenshot](documentation/validation/css-events.png) | ✅ |
+| team.css | N/A | ![screenshot](documentation/validation/css-team.png) | ✅ |
+
+#### JAVASCRIPT
+
+We have used the recommended [JShint Validator](https://jshint.com) to validate our JS file.
+
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| scripts.js | ![screenshot](documentation/validation/js-scripts.png) | Warning: outer-scoped functions |
+
+#### PYTHON
+
+We have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate our Python files.
+
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| contact/admin.py | [PEP8 CI](https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/contact/admin.py) | ![screenshot](documentation/validation/python-contact-admin.png) | ✅ |
+| contact/forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/contact/forms.py) | ![screenshot](documentation/validation/python-contact-forms.png) | ✅ |
+| contact/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/contact/models.py) | ![screenshot](documentation/validation/python-contact-models.png) | ✅ |
+| contact/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/contact/urls.py) | ![screenshot](documentation/validation/python-contact-urls.png) | ✅ |
+| contact/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/contact/views.py) | ![screenshot](documentation/validation/python-contact-views.png) | ✅ |
+| events/admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/events/admin.py) | ![screenshot](documentation/validation/python-events-admin.png) | ✅ |
+| events/forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/events/forms.py) | ![screenshot](documentation/validation/python-events-forms.png) | ✅ |
+| events/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/events/models.py) | ![screenshot](documentation/validation/python-events-models.png) | ✅ |
+| events/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/events/urls.py) | ![screenshot](documentation/validation/python-events-urls.png) | ✅ |
+| events/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/events/views.py) | ![screenshot](documentation/validation/python-events-views.png) | ✅ |
+| index/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/index/urls.py) | ![screenshot](documentation/validation/python-index-urls.png) | ✅ |
+| index/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/index/views.py) | ![screenshot](documentation/validation/python-index-views.png) | ✅ |
+| profiles/admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/profiles/admin.py) | ![screenshot](documentation/validation/python-profiles-admin.png) | ✅ |
+| profiles/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/profiles/models.py) | ![screenshot](documentation/validation/python-profiles-models.png) | ✅ |
+| profiles/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/profiles/urls.py) | ![screenshot](documentation/validation/python-profiles-urls.png) | ✅ |
+| profiles/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/profiles/views.py) | ![screenshot](documentation/validation/python-profiles-views.png) | ✅ |
+| united/settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/united/settings.py) | ![screenshot](documentation/validation/python-united-settings.png) | ✅ |
+| united/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/united/urls.py) | ![screenshot](documentation/validation/python-united-urls.png) | ✅ |
+| united/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hannahro15/July24Hackathon-United-Events/main/united/views.py) | ![screenshot](documentation/validation/python-united-views.png) | ✅ |
+
 ### Unfixed bugs
 
-• Django security issue with vulnerabilities appearing in my terminal/Github
+- ~~Django security issue with vulnerabilities~~
+    - PATCHED: updated `Django==4.2.14`
+
  ![Security issues screenshot](documentation/other-images/bugs-screenshot.png)
 
 ## Database Design
@@ -198,32 +291,49 @@ We've used [Balsamiq](https://balsamiq.com/wireframes) to design our site wirefr
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
 Understanding the relationships between different tables can save time later in the project.
 
-```python
-COMING SOON
+Below is our ERD using the [Mermaid](https://mermaid.live/edit#pako:eNqdU8tuwjAQ_BXLZzjQY24VDVJFeQhoT5EiEy9hRWJH9kYUkfx77YaW1oCoaimSMzMez242R55pCTziYJ5Q5EaUiWJuDWfT1eNwxY7dq1-oiKFk8_EZsmRQ5UyJEi5AKAUWZ5TgnVgJ1or8h1YKAsISmAVFHdwmqtvEb_H0XwG8qWOEodRvAwKUDOCTSaEzQahVkFmCzQxWV5gt5tvCPWQDQmSZKxTXWCAdAo4w2wGlqDY6PCUl-ltEkSpNYC8C7mFt8Sv4d5vmi9no-SW-0ygP1RZM6vDROLB4XcaLvzXaW1z92pWwdq-NvDcGa60Lhja1dQXGu92opmn6_abpkkUs4YNokPDfkraTdGPiNZOHidfwHi_BuGulG-vPqhJOW3ChuVdJYXZe1jqdqEkvDyrjEZkaeryu_GScfgQebURhof0A3PfwUg) library.
+
+```mermaid
+erDiagram
+    CONTACT {
+        int id PK
+        string name
+        string email
+        text message
+        datetime sent
+    }
+
+    EVENT {
+        int id PK
+        string name
+        date start_date
+        date end_date
+        string location
+        text description
+        text highlights
+        text accessibility
+        text ticket_info
+        text additional_notes
+        string website
+    }
+
+    PROFILE {
+        int id PK
+        int user_id FK
+    }
+
+    USER {
+        int id PK
+        string username
+        string password
+        string email
+        bool is_superuser
+    }
+
+    PROFILE ||--|| USER : "1:1"
+    PROFILE }|--|| EVENT : "M2M"
+
 ```
-
-We have used `pygraphviz` and `django-extensions` to auto-generate an ERD.
-
-The steps taken were as follows:
-- In the terminal: `sudo apt update`
-- then: `sudo apt-get install python3-dev graphviz libgraphviz-dev pkg-config`
-- then type `Y` to proceed
-- then: `pip3 install django-extensions pygraphviz`
-- in the `settings.py` file, we added the following to our `INSTALLED_APPS`:
-```python
-INSTALLED_APPS = [
-    ...
-    'django_extensions',
-    ...
-]
-```
-- back in the terminal: `python3 manage.py graph_models -a -o erd.png`
-- dragged the new `erd.png` file into our `documentation/` folder
-- removed `'django_extensions',` from our `INSTALLED_APPS`
-- finally, in the terminal: `pip3 uninstall django-extensions pygraphviz -y`
-
-![erd](documentation/erd.png)
-source: [medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16)
 
 
 ## Agile Development Process
@@ -233,16 +343,15 @@ source: [medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to
 [GitHub Projects](https://github.com/users/hannahro15/projects/3) served as an Agile tool for this project.
 It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
 
-Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+Through it, user stories, issues, and tasks were planned, then tracked on a daily basis using the basic Kanban board.
 
 ![screenshot](documentation/other-images/kanban-board.png)
 
 ### GitHub Issues
 
 [GitHub Issues](https://github.com/hannahro15/July24Hackathon-United-Events/issues) served as an another Agile tool.
-There, we used a **User Story Template** to manage user stories.
 
-It also helped with milestone iterations on a weekly basis.
+It also helped with iterations on a daily basis.
 
 
 - [Open Issues](https://github.com/hannahro15/July24Hackathon-United-Events/issues) [![GitHub issues](https://img.shields.io/github/issues/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/issues)
@@ -266,7 +375,7 @@ Using this approach, we were able to apply the MoSCow prioritization and labels 
 
 ## Deployment
 
-The live deployed application can be found deployed on [Heroku](https://pending.herokuapp.com).
+The live deployed application can be found deployed on [Heroku](https://united-events-a9a097150c85.herokuapp.com).
 
 ### PostgreSQL Database
 
@@ -284,17 +393,6 @@ To obtain our own Postgres Database from Code Institute, we followed these steps
 > - Code Institute students are allowed a maximum of 8 databases.
 > - Databases are subject to deletion after 18 months.
 
-### Cloudinary API
-
-This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
-
-To obtain your own Cloudinary API key, create an account and log in.
-
-- For *Primary interest*, you can choose *Programmable Media for image and video API*.
-- Optional: *edit your assigned cloud name to something more memorable*.
-- On your Cloudinary Dashboard, you can copy your **API Environment Variable**.
-- Be sure to remove the `CLOUDINARY_URL=` as part of the API **value**; this is the **key**.
-
 ### Heroku Deployment
 
 This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
@@ -310,16 +408,13 @@ Deployment steps are as follows, after account setup:
 
 | Key | Value |
 | --- | --- |
-| `CLOUDINARY_URL` | user's own value |
 | `DATABASE_URL` | user's own value |
-| `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
 | `SECRET_KEY` | user's own value |
 
-Heroku needs three additional files in order to deploy properly.
+Heroku needs two additional files in order to deploy properly.
 
 - requirements.txt
 - Procfile
-- runtime.txt
 
 You can install this project's **requirements** (where applicable) using:
 
@@ -333,11 +428,6 @@ The **Procfile** can be created with the following command:
 
 - `echo web: gunicorn app_name.wsgi > Procfile`
 - *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*
-
-The **runtime.txt** file needs to know which Python version you're using:
-1. type: `python3 --version` in the terminal.
-2. in the **runtime.txt** file, add your Python version:
-	- `python-3.9.19`
 
 For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
 
@@ -373,7 +463,6 @@ Sample `env.py` file:
 ```python
 import os
 
-os.environ.setdefault("CLOUDINARY_URL", "user's own value")
 os.environ.setdefault("DATABASE_URL", "user's own value")
 os.environ.setdefault("SECRET_KEY", "user's own value")
 

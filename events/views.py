@@ -15,8 +15,8 @@ def events(request):
     - Builds calendar using start/end date, and full-month display
     """
     current_date = datetime.now()
-    first_event = Event.objects.filter(start_date__gte=current_date).order_by("start_date").first()
-    last_event = Event.objects.filter(start_date__gte=current_date).order_by("start_date").last()
+    first_event = Event.objects.filter(start_date__gte=current_date).order_by("start_date").first()  # noqa
+    last_event = Event.objects.filter(start_date__gte=current_date).order_by("start_date").last()  # noqa
 
     # Get the first day of the month of the first (next) event
     start_date = first_event.start_date if first_event else current_date
@@ -25,7 +25,7 @@ def events(request):
 
     # Get the last day of the month of the last event
     last_of_last_event_month = end_date.replace(day=1)
-    last_of_last_event_month = (last_of_last_event_month + timedelta(days=32)).replace(day=1) - timedelta(days=0)
+    last_of_last_event_month = (last_of_last_event_month + timedelta(days=32)).replace(day=1) - timedelta(days=0)  # noqa
 
     template = "events/events.html"
     context = {

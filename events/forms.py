@@ -29,4 +29,3 @@ class EventForm(forms.ModelForm):
             'additional_notes': 'Additional Notes (Optional)',
             'website': 'Website'
         }
-        

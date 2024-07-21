@@ -65,7 +65,7 @@
                                                 {% endif %}
                                                 <br>
                                                 <strong>Where?</strong>
-                                                <a href="https://www.google.com/maps/search/{{ event.location }}+uk" target="_blank" rel="noopener noreferrer external">{{ event.location }}</a>
+                                                <a href="https://www.google.com/maps/search/{{ event.location|cut:' ' }}+uk" target="_blank" rel="noopener noreferrer external">{{ event.location }}</a>
                                                 <br>
                                                 <strong>Interested:</strong>
                                                 {{ event.total_interested }}
