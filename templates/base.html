@@ -71,10 +71,11 @@
                                     </li>
                                     {% if request.user.is_superuser %}
                                         <!-- superusers / admin -->
+                                        <li><hr class="dropdown-divider"></li>
                                         <li class="bg-secondary">
-                                            <a href="{% url 'add-event' %}" class="nav-link dropdown-item">
-                                                <i class="fa-solid fa-circle-plus fa-fw"></i>
-                                                Add Event
+                                            <a href="{% url 'manage-events' %}" class="nav-link dropdown-item">
+                                                <i class="fa-solid fa-list-check fa-fw"></i>
+                                                Manage Events
                                             </a>
                                         <li class="bg-secondary">
                                             <a href="{% url 'admin:index' %}" target="_blank" rel="noopener" class="nav-link dropdown-item">
@@ -82,6 +83,7 @@
                                                 Django Admin
                                             </a>
                                         </li>
+                                        <li><hr class="dropdown-divider"></li>
                                     {% endif %}
                                         <li class="bg-secondary">
                                             <a href="{% url 'account_logout' %}" class="nav-link dropdown-item">
