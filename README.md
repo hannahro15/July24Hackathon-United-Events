@@ -1,6 +1,6 @@
 # [UNITED EVENTS](https://united-events-a9a097150c85.herokuapp.com)
 
-An events based project for LGBTQIA+ communities which has a pre-populated events calendar; clicking on diarised events within the calendar pops up a modal offering much more detail, including links to the official websites each event. There is both a registration form and a login form on the website, allowing users to create and log in to their personal accounts. This enables them to express interest in specific events directly from the calendar modals. There is also a home page, contact page and a team page too!
+An events based project for LGBTQIA+ communities which has a pre-populated events calendar; clicking on diarised events within the calendar pops up a modal offering much more detail, including links to the official website for each event. There is both a registration form and a login form on the website, allowing users to create and log in to their personal accounts. This enables them to express interest in specific events directly from the calendar modals. There is also a home page, contact page and a team page too!
 
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/commits/main)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hannahro15/July24Hackathon-United-Events)](https://github.com/hannahro15/July24Hackathon-United-Events/commits/main)
