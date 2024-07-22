@@ -552,7 +552,6 @@ A huge shout out to our fellow team members:
 - Lauren Yeung: [GitHub](https://github.com/Lauren21717)
 - Sean Lutz: [GitHub](https://github.com/primarypigments)
 - Tim Nelson: [GitHub](https://github.com/TravelTimN)
-- Trevor Leslie: [GitHub](https://github.com/TrevorJamesLeslie)
 
 And of course our lovely facilitators:
 - Sawyer, Kenan, Rachel, and Maria
