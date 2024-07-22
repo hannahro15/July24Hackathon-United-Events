@@ -10,3 +10,4 @@ node_modules/
 django_errors.log
 .vscode/
 settings.json
+db.sqlite3
